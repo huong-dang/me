@@ -16,6 +16,13 @@ const watchIcons = {
         imgUrl:
             "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEL0lEQVR4Ab3YA5DsWgKA4e+cJOOZvfbatm3btm17C2vbfrZt27aNcXdyXld18am7k7n3q2pGf1UcDT0Ub8f38Fdsr/v6O36Ad+GRGggG93C8Ga/R/8LPwi7YGidsrsAn4xt4hWb2x/dwyFIFFvgRPmNp/Qlfws1NAh+BHfEAm8dVeB2OrBP4Euxpy3grthok8EXY25b1RmwHABDd0f16xX1teeGfa4f8avWQ33Zef10zZH0WAMA7JwrfWjbkM1NDvtL5/HjncyQEd2NbPL5XYNbP3vWm8dy7OmGf7IR+bEXhfZ3YN0xkAODVY7lOlPdMFj40OeQdneAhPR2I8bsL/BU26uGY+aSar1zTqly1WLFQedV4BgCuLJML2pVLOq+LOq/LOq9KT5P4x10FPhQf04cb21zTZjTS/Z08dyzzoCLS3BvwDO4Y+Ht9qnBFiwiYS2R58I7JzBL5I0AE3BvP1qeJyHVtbinJAxHK5KVjSxb4MDwGIuAD9G80MlNxdXc1gxvayWNHogcWAQSNfRQi4O30LyDgkhYxkTCvu5rfOZmDMjWOfBNCxP1xX/pXYlnOVS2ubTMciGi1K6+fyMC1ZRI0sgxPjniaAaXEWHc1u3CR8QjcUPKwkehpnde5i0mFoJGnRjxUDSExGrmsRQWoIPDq8dytJa1E1Mh9IjYYUEKFVVl3FV/dYiQQMNtOXjoePaiIrmwnMWhiZcSUGipMZExXnLfQ/Z5wU8UjhoPHjgQXLRI1MhbVlBAwGblgkTIRENBK3G+YhUSJoL6IW9VUYWMRnNMpOW0+WZYRcGvF/Ya4R8bNJVFS01zElWpKiRU5l5fJPrOVkSyosJhYlbM255o2WVDXDRFnq6lCTicm2Gm61CqTYQRUuNcQrURS28URR6gpAR40xDGLpYNnKyvyAKbL7mpelnFrGQS1HB1xNi7TwPIIbDXdFrIgoaUbt7HgppLMwKZxRAT8X00JWQB2nim128loIKCVWJ+TkAxsB5QR8BcNRERcV3L4XGlZHiTMJdYXTEVmKoKB/B4i4Bwcp6YkGArA1reWhCChnZjMWFcwXRGDfl2EoyAC4EMaCWDb6dIti5WpQMBiYkORFIGU9OtDABEAJ+LfdbIiAK6rkt1mSxNFBPMVq/NgZcZM0o+9se8dA4EP4yY9rMuC++XRvfNgU+e1MgYBALvOlOTBuiJYW0TFcPTk0aDUU4m3A0AOAJjDc3GiuxCw31zpiPnSBe3KdOLasrKQEoAdpktvvGjOaAyWRR5QRDlGA3PJ3XkRru/n0cebsPVdBSa91Zj2Q/gzAECAXpFbwIfxJxgkEJ6GnbDa5jGLN2BPqBMIK/EzvMvS2h6fxaXQJBDgpfgGnqaZE/F97KgPweCehnfgVdioP1djd/wXB9hCIp6OT+Kn+Ce2xw74F36Oz+DZKNR0G9LyYOtXWmbtAAAAAElFTkSuQmCC",
     },
+    crackle: {
+        imgUrl: "https://ssl.gstatic.com/kpui/watch/crackle_40x40.png",
+    },
+    disney: {
+        imgUrl:
+            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEWUlEQVR4AcSWU7hbQRRGy6C2bdu2bdu2bdu2bdu2bdtanf31NG1vzD78ORqszYk/XZjsriikUiGlrkoLlY4qPVT6rOmh9m6hNqaQzHFlL2cnZFbqr3RcCSd1XJub2RuAaZVGaJ7BTT3U1krrCUD/So2VTinhYZ3S1vbvKmBUzVK8rBGyl7OA8ZRmKeEjyV7xHAWM6js4M8io9gD9+yistsLt3xagJC3/WY2tAab1fLW6XN1pzQBdDm24fBiilMcQtz7GpK0wpOmAIXM3DLl7o8/RCX2a+uiiFHA61H4BMzvbhPVhC2GMUhtj9Droo5ZHF8EPRNic6OKXR59PQXZaga7tXHTJKjnTzDP/DdjfcbicGMKWwhChjILI47hX0tYg8LitBO4yA10kh+b1/w0Y0vGzNQf6MIWV9/K6ll9hcxCo0RACrj+KLmFJR87ukAJYyPFNxPKcbhdC4GIt8H/iikqB4vbGFhLAro4vnsNj1RqoYnuC7jqKLpxNg7sK4MK/XyZIXYFy1bpQo0FvCpVuTdgYBb3WUqKOnEvc7uNsjVkogEe1BzLkqsPufSdp22UMA4fPZunKHTx5+pL1m/ZTslKHfyaHi1mIvoNnMG32GmInLeMSoCFibuqeuYLRetEc9WevvRjD56RoubbsPXBa4EmU9lerWLh0q4J/Qftu41iwZIvLXsxSoyvx0lex2m4E8LMtuHmLN5meG7YYxIOHT8marwGnlOWHj51nyYrtpMtey61QF6/Q3tq3zzYBY6nQ3b7zkHgpyxNMC0OZKp14/OQFZat2RhaWHBWvynOiNBVNcwePnGvK6ZyFGpNYjYkUtyhRE5hX7umzV20Bmoc4TvKyLF+9kzt3H/Hly1fu3nvMh4+fmL94M0Ei5GLl2t1Ijq7duI81G/ayc89xps5aTe+B0xkych5dek9iy/bD1G7Uj6fPXqnUOIEAr1q3mxbtRyCpkTpLDSLHK4Y4QaJRqnJH5D5E5LxmIT7qF1A2iJ6oJOlz1kE8KO9iJC7FpSu3iRinCINGzGHuoo0I+IBhs5GwHzp6DoGQsF+7cY8Va3YxZ+FG3n/4yDpliHSEfQdPI8Cde01k49aD9Ow/lfWbD3BdjZ81fz1jJy1VkKXNimShX0CxbPKMVdRs2IdXr9/98y1Ntpo8evycSrW6I9+GjZ7P6vV7uHHzPidPX0EMkor/8eMHmxTEkeMXGD9lGZK/ABJOGRcmuunslihI1Ky0GSuNWlwtnvr27TvLVu1AikG8JPnXuNUQU55Ju2nXdSwS2rSqWKR/yrfsBRqRJW999h86Q68B0xCDnr94zYixC4md7N+2JO0quOVW09XmUSeQQ0fNQ0Kdr3gLUmetgUHr/M5KcnritBXOzivk5J8F1yV5JpX+cyR29PlRmlu0xC1d80HFDCl6Wgk1WOmPMRusmE3+QYL7Bn2naVB3O4dyx33ghz6G6uDRwA+/DYcBTPoPAY+EQfSBn4YAAMW09AcCluy+AAAAAElFTkSuQmCC",
+    },
 };
 const artRect = {
     media: [
@@ -110,105 +117,121 @@ const artRect = {
                 },
             ],
         },
-        // {
-        //     name: "Train to Busan",
-        //     url: "",
-        //     imgUrl: "",
-        //     watch: [
-        //         {
-        //             src: "",
-        //             srcName: "",
-        //         },
-        //     ],
-        // },
+        {
+            name: "Train to Busan",
+            url: "https://en.wikipedia.org/wiki/Train_to_Busan",
+            imgUrl:
+                "https://upload.wikimedia.org/wikipedia/en/9/95/Train_to_Busan.jpg",
+            watch: [
+                {
+                    src: "http://www.youtube.com/watch?v=-4TqmSVavZk",
+                    srcName: "youtube",
+                },
+                {
+                    src: "http://www.crackle.com/train-to-busan/2511945",
+                    srcName: "crackle",
+                },
+            ],
+        },
         // {
         //     name: "New Girl",
-        //     url: "",
-        //     imgUrl: "",
+        //     url: "https://en.wikipedia.org/wiki/New_Girl",
+        //     imgUrl:
+        //         "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQrk46eIHJvqj-9eSW61p8OoxjAcHHZkQ5NFnyZJOYRH-lWp8sl",
         //     watch: [
         //         {
-        //             src: "",
-        //             srcName: "",
+        //             src: "https://www.netflix.com/watch/70196145?source=35",
+        //             srcName: "netflix",
         //         },
         //     ],
         // },
-        // {
-        //     name: "Captain America: Civil War",
-        //     url: "",
-        //     imgUrl: "",
-        //     watch: [
-        //         {
-        //             src: "",
-        //             srcName: "",
-        //         },
-        //     ],
-        // },
-        // {
-        //     name: "The Half of It",
-        //     url: "",
-        //     imgUrl: "",
-        //     watch: [
-        //         {
-        //             src: "",
-        //             srcName: "",
-        //         },
-        //     ],
-        // },
-        // {
-        //     name: "Dear Ex",
-        //     url: "",
-        //     imgUrl: "",
-        //     watch: [
-        //         {
-        //             src: "",
-        //             srcName: "",
-        //         },
-        //     ],
-        // },
-        // {
-        //     name: "Homecoming King",
-        //     url: "",
-        //     imgUrl: "",
-        //     watch: [
-        //         {
-        //             src: "",
-        //             srcName: "",
-        //         },
-        //     ],
-        // },
+        {
+            name: "Captain America: Civil War",
+            url: "https://en.wikipedia.org/wiki/Captain_America:_Civil_War",
+            imgUrl:
+                "https://upload.wikimedia.org/wikipedia/en/5/53/Captain_America_Civil_War_poster.jpg",
+            watch: [
+                {
+                    src:
+                        "https://www.disneyplus.com/video/dc2f0aea-bac6-450d-bb3c-062309e4942d?pid=AssistantSearch",
+                    srcName: "disney",
+                },
+            ],
+        },
+        {
+            name: "The Half of It",
+            url: "https://en.wikipedia.org/wiki/The_Half_of_It",
+            imgUrl:
+                "https://upload.wikimedia.org/wikipedia/en/7/71/The_Half_of_It_poster.jpeg",
+            watch: [
+                {
+                    src: "https://www.netflix.com/watch/81005150?source=35",
+                    srcName: "netflix",
+                },
+            ],
+        },
+        {
+            name: "Dear Ex",
+            url: "https://en.wikipedia.org/wiki/Dear_Ex",
+            imgUrl:
+                "https://upload.wikimedia.org/wikipedia/en/6/66/Dear_Ex_Netflix_Edition_poster.jpg",
+            watch: [
+                {
+                    src: "https://www.netflix.com/watch/81045891?source=35",
+                    srcName: "netflix",
+                },
+            ],
+        },
+        {
+            name: "Homecoming King",
+            url: "https://en.wikipedia.org/wiki/Hasan_Minhaj:_Homecoming_King",
+            imgUrl:
+                "https://upload.wikimedia.org/wikipedia/en/e/e5/Hasan_Minhaj%2C_Homecoming_King.jpeg",
+            watch: [
+                {
+                    src: "https://www.netflix.com/watch/80134781?source=35",
+                    srcName: "netflix",
+                },
+            ],
+        },
         // {
         //     name: "Jigsaw",
-        //     url: "",
-        //     imgUrl: "",
+        //     url: "https://www.netflix.com/title/80223685",
+        //     imgUrl:
+        //         "https://i.pinimg.com/originals/f1/8b/29/f18b299dffa0acf88e9bcd1e72f1960f.jpg",
         //     watch: [
         //         {
-        //             src: "",
-        //             srcName: "",
+        //             src: "https://www.netflix.com/title/80223685",
+        //             srcName: "netflix",
         //         },
         //     ],
         // },
-        // {
-        //     name: "Quarter-Life Crisis",
-        //     url: "",
-        //     imgUrl: "",
-        //     watch: [
-        //         {
-        //             src: "",
-        //             srcName: "",
-        //         },
-        //     ],
-        // },
-        // {
-        //     name: "What Kind of Asian Are You",
-        //     url: "",
-        //     imgUrl: "",
-        //     watch: [
-        //         {
-        //             src: "",
-        //             srcName: "",
-        //         },
-        //     ],
-        // },
+        {
+            name: "Quarter-Life Crisis",
+            url: "https://www.netflix.com/title/81157965",
+            imgUrl:
+                "https://m.media-amazon.com/images/M/MV5BMWI1YzRiZDUtMzZhMC00Yzk0LWI4MGItMmRjZTI1MjY0NzYyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+            watch: [
+                {
+                    src: "https://www.netflix.com/watch/81157965?source=35",
+                    srcName: "netflix",
+                },
+            ],
+        },
+        {
+            name: "What Kind of Asian Are You",
+            url:
+                "https://www.youtube.com/watch?v=VoP0ox_Jw_w&ab_channel=ButtonPoetry",
+            imgUrl:
+                "http://4.bp.blogspot.com/-2Ubwifh5J60/Vl-GabceWdI/AAAAAAAABls/YecCGzjTbk4/s1600/alex-dang.jpg",
+            watch: [
+                {
+                    src:
+                        "https://www.youtube.com/watch?v=VoP0ox_Jw_w&ab_channel=ButtonPoetry",
+                    srcName: "youtube",
+                },
+            ],
+        },
         // {
         //     name: "",
         //     url: "",
