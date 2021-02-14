@@ -12,6 +12,10 @@ const watchIcons = {
     vudu: {
         imgUrl: "https://ssl.gstatic.com/kpui/watch/vudu_40x40.png",
     },
+    netflix: {
+        imgUrl:
+            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEL0lEQVR4Ab3YA5DsWgKA4e+cJOOZvfbatm3btm17C2vbfrZt27aNcXdyXld18am7k7n3q2pGf1UcDT0Ub8f38Fdsr/v6O36Ad+GRGggG93C8Ga/R/8LPwi7YGidsrsAn4xt4hWb2x/dwyFIFFvgRPmNp/Qlfws1NAh+BHfEAm8dVeB2OrBP4Euxpy3grthok8EXY25b1RmwHABDd0f16xX1teeGfa4f8avWQ33Zef10zZH0WAMA7JwrfWjbkM1NDvtL5/HjncyQEd2NbPL5XYNbP3vWm8dy7OmGf7IR+bEXhfZ3YN0xkAODVY7lOlPdMFj40OeQdneAhPR2I8bsL/BU26uGY+aSar1zTqly1WLFQedV4BgCuLJML2pVLOq+LOq/LOq9KT5P4x10FPhQf04cb21zTZjTS/Z08dyzzoCLS3BvwDO4Y+Ht9qnBFiwiYS2R58I7JzBL5I0AE3BvP1qeJyHVtbinJAxHK5KVjSxb4MDwGIuAD9G80MlNxdXc1gxvayWNHogcWAQSNfRQi4O30LyDgkhYxkTCvu5rfOZmDMjWOfBNCxP1xX/pXYlnOVS2ubTMciGi1K6+fyMC1ZRI0sgxPjniaAaXEWHc1u3CR8QjcUPKwkehpnde5i0mFoJGnRjxUDSExGrmsRQWoIPDq8dytJa1E1Mh9IjYYUEKFVVl3FV/dYiQQMNtOXjoePaiIrmwnMWhiZcSUGipMZExXnLfQ/Z5wU8UjhoPHjgQXLRI1MhbVlBAwGblgkTIRENBK3G+YhUSJoL6IW9VUYWMRnNMpOW0+WZYRcGvF/Ya4R8bNJVFS01zElWpKiRU5l5fJPrOVkSyosJhYlbM255o2WVDXDRFnq6lCTicm2Gm61CqTYQRUuNcQrURS28URR6gpAR40xDGLpYNnKyvyAKbL7mpelnFrGQS1HB1xNi7TwPIIbDXdFrIgoaUbt7HgppLMwKZxRAT8X00JWQB2nim128loIKCVWJ+TkAxsB5QR8BcNRERcV3L4XGlZHiTMJdYXTEVmKoKB/B4i4Bwcp6YkGArA1reWhCChnZjMWFcwXRGDfl2EoyAC4EMaCWDb6dIti5WpQMBiYkORFIGU9OtDABEAJ+LfdbIiAK6rkt1mSxNFBPMVq/NgZcZM0o+9se8dA4EP4yY9rMuC++XRvfNgU+e1MgYBALvOlOTBuiJYW0TFcPTk0aDUU4m3A0AOAJjDc3GiuxCw31zpiPnSBe3KdOLasrKQEoAdpktvvGjOaAyWRR5QRDlGA3PJ3XkRru/n0cebsPVdBSa91Zj2Q/gzAECAXpFbwIfxJxgkEJ6GnbDa5jGLN2BPqBMIK/EzvMvS2h6fxaXQJBDgpfgGnqaZE/F97KgPweCehnfgVdioP1djd/wXB9hCIp6OT+Kn+Ce2xw74F36Oz+DZKNR0G9LyYOtXWmbtAAAAAElFTkSuQmCC",
+    },
 };
 const artRect = {
     media: [
@@ -94,6 +98,117 @@ const artRect = {
                 },
             ],
         },
+        {
+            name: "Dear White People",
+            url: "https://en.wikipedia.org/wiki/Dear_White_People_(TV_series)",
+            imgUrl:
+                "https://upload.wikimedia.org/wikipedia/en/f/f5/Dear_White_People_Netflix.png",
+            watch: [
+                {
+                    src: "https://www.netflix.com/watch/80095698?source=35",
+                    srcName: "netflix",
+                },
+            ],
+        },
+        // {
+        //     name: "Train to Busan",
+        //     url: "",
+        //     imgUrl: "",
+        //     watch: [
+        //         {
+        //             src: "",
+        //             srcName: "",
+        //         },
+        //     ],
+        // },
+        // {
+        //     name: "New Girl",
+        //     url: "",
+        //     imgUrl: "",
+        //     watch: [
+        //         {
+        //             src: "",
+        //             srcName: "",
+        //         },
+        //     ],
+        // },
+        // {
+        //     name: "Captain America: Civil War",
+        //     url: "",
+        //     imgUrl: "",
+        //     watch: [
+        //         {
+        //             src: "",
+        //             srcName: "",
+        //         },
+        //     ],
+        // },
+        // {
+        //     name: "The Half of It",
+        //     url: "",
+        //     imgUrl: "",
+        //     watch: [
+        //         {
+        //             src: "",
+        //             srcName: "",
+        //         },
+        //     ],
+        // },
+        // {
+        //     name: "Dear Ex",
+        //     url: "",
+        //     imgUrl: "",
+        //     watch: [
+        //         {
+        //             src: "",
+        //             srcName: "",
+        //         },
+        //     ],
+        // },
+        // {
+        //     name: "Homecoming King",
+        //     url: "",
+        //     imgUrl: "",
+        //     watch: [
+        //         {
+        //             src: "",
+        //             srcName: "",
+        //         },
+        //     ],
+        // },
+        // {
+        //     name: "Jigsaw",
+        //     url: "",
+        //     imgUrl: "",
+        //     watch: [
+        //         {
+        //             src: "",
+        //             srcName: "",
+        //         },
+        //     ],
+        // },
+        // {
+        //     name: "Quarter-Life Crisis",
+        //     url: "",
+        //     imgUrl: "",
+        //     watch: [
+        //         {
+        //             src: "",
+        //             srcName: "",
+        //         },
+        //     ],
+        // },
+        // {
+        //     name: "What Kind of Asian Are You",
+        //     url: "",
+        //     imgUrl: "",
+        //     watch: [
+        //         {
+        //             src: "",
+        //             srcName: "",
+        //         },
+        //     ],
+        // },
         // {
         //     name: "",
         //     url: "",
