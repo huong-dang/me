@@ -102,7 +102,7 @@ const artRect = {
             name: "Dear White People",
             url: "https://en.wikipedia.org/wiki/Dear_White_People_(TV_series)",
             imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/f/f5/Dear_White_People_Netflix.png",
+                "http://t1.gstatic.com/images?q=tbn:ANd9GcSpBWWHMsj7Sm1sSGqxijzHe6JuLRt-YdbXTVYoF7d6lisvb6Bc",
             watch: [
                 {
                     src: "https://www.netflix.com/watch/80095698?source=35",
