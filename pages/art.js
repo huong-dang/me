@@ -59,6 +59,52 @@ const artRect = {
                 },
             ],
         },
+        {
+            name: "God's Own Country",
+            url:
+                "https://en.wikipedia.org/wiki/God%27s_Own_Country_(2017_film)",
+            imgUrl:
+                "https://upload.wikimedia.org/wikipedia/en/1/14/God%27s_Own_Country_%282017_film%29.png",
+            watch: [
+                {
+                    src:
+                        "https://www.hulu.com/watch/d0a4b82d-2bf5-4794-a4e4-6d047a2aed46",
+                    srcName: "hulu",
+                },
+                {
+                    src: "http://www.youtube.com/watch?v=5C9B_FL3EG4",
+                    srcName: "youtube",
+                },
+            ],
+        },
+        {
+            name: "The Hate U Give",
+            url: "https://en.wikipedia.org/wiki/The_Hate_U_Give_(film)",
+            imgUrl:
+                "https://upload.wikimedia.org/wikipedia/en/b/bc/The_Hate_U_Give_poster.png",
+            watch: [
+                {
+                    src:
+                        "https://www.hulu.com/watch/71ec4528-cfe0-409c-accb-d1bb42c13db9",
+                    srcName: "hulu",
+                },
+                {
+                    src: "http://www.youtube.com/watch?v=NXy0H-EZR5s",
+                    srcName: "youtube",
+                },
+            ],
+        },
+        // {
+        //     name: "",
+        //     url: "",
+        //     imgUrl: "",
+        //     watch: [
+        //         {
+        //             src: "",
+        //             srcName: "",
+        //         },
+        //     ],
+        // },
     ],
     books: [
         {
@@ -88,37 +134,49 @@ const containerItem = {
     justifyContent: "center",
 };
 
+const mediaStyle = {
+    margin: "5px",
+    backgroundColor: "#ceb1be",
+    padding: "10px",
+    borderRadius: "5%",
+};
+
 export default function Art() {
     const media = artRect.media.map((media, idx) => {
         const watch = media.watch.map((w, idx) => {
             return (
-                <a href={w.src} key={idx}>
+                <a href={w.src} key={idx} style={{ padding: "3px" }}>
                     <img src={watchIcons[w.srcName].imgUrl} alt={`name`} />
                 </a>
             );
         });
+
         return (
-            <div key={idx}>
-                <img src={media.imgUrl} alt={`${media.name} movie image`} />
+            <div style={mediaStyle} key={idx}>
+                <img
+                    style={{ borderRadius: "5%" }}
+                    src={media.imgUrl}
+                    alt={`${media.name} movie image`}
+                />
                 <div style={containerItem}>{watch}</div>
             </div>
         );
     });
 
-    const books = artRect.books.map((book, idx) => {
-        return (
-            <div key={idx}>
-                <img src={book.imgUrl} alt={`${book.title} book image`} />
-            </div>
-        );
-    });
+    // const books = artRect.books.map((book, idx) => {
+    //     return (
+    //         <div key={idx}>
+    //             <img src={book.imgUrl} alt={`${book.title} book image`} />
+    //         </div>
+    //     );
+    // });
 
     return (
         <div>
             <h1 style={containerItem}>Media</h1>
             <div style={container}>{media}</div>
-            <h1 style={containerItem}>Books</h1>
-            <div style={container}>{books}</div>
+            {/* <h1 style={containerItem}>Books</h1>
+            <div style={container}>{books}</div> */}
         </div>
     );
 }
