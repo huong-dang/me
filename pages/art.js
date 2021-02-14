@@ -52,7 +52,6 @@ export default function Art() {
     const media = artRect.media.map((media, idx) => {
         return (
             <div key={idx}>
-                <div style={containerItem}>{media.name}</div>
                 <img src={media.imgUrl} alt={`${media.name} movie image`} />
             </div>
         );
@@ -61,8 +60,6 @@ export default function Art() {
     const books = artRect.books.map((book, idx) => {
         return (
             <div key={idx}>
-                <div>{book.name}</div>
-                <div>{book.author}</div>
                 <img src={book.imgUrl} alt={`${book.title} book image`} />
             </div>
         );
@@ -77,9 +74,9 @@ export default function Art() {
 
     return (
         <div>
-            <h1>Media</h1>
+            <h1 style={containerItem}>Media</h1>
             <div style={container}>{media}</div>
-            <h1>Books</h1>
+            <h1 style={containerItem}>Books</h1>
             <div style={container}>{books}</div>
         </div>
     );
