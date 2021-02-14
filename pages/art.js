@@ -209,8 +209,7 @@ const artRect = {
         {
             name: "Quarter-Life Crisis",
             url: "https://www.netflix.com/title/81157965",
-            imgUrl:
-                "https://m.media-amazon.com/images/M/MV5BMWI1YzRiZDUtMzZhMC00Yzk0LWI4MGItMmRjZTI1MjY0NzYyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+            imgUrl: "/taylor.jpg",
             watch: [
                 {
                     src: "https://www.netflix.com/watch/81157965?source=35",
@@ -222,13 +221,23 @@ const artRect = {
             name: "What Kind of Asian Are You",
             url:
                 "https://www.youtube.com/watch?v=VoP0ox_Jw_w&ab_channel=ButtonPoetry",
-            imgUrl:
-                "http://4.bp.blogspot.com/-2Ubwifh5J60/Vl-GabceWdI/AAAAAAAABls/YecCGzjTbk4/s1600/alex-dang.jpg",
+            imgUrl: "/alex.jpg",
             watch: [
                 {
                     src:
                         "https://www.youtube.com/watch?v=VoP0ox_Jw_w&ab_channel=ButtonPoetry",
                     srcName: "youtube",
+                },
+            ],
+        },
+        {
+            name: "Jigsaw",
+            url: "https://www.netflix.com/title/80223685",
+            imgUrl: "/daniel.jpg",
+            watch: [
+                {
+                    src: "https://www.netflix.com/title/80223685",
+                    srcName: "netflix",
                 },
             ],
         },
