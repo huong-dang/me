@@ -15,6 +15,18 @@ export default function Home() {
                 </p>
             </div>
             <div className={styles.content}>
+                <h1>My current projects</h1>
+                <h2>DearGenie</h2>
+                <p>A wishlist.</p>
+                <h2>BetterChoice</h2>
+                <p>Amazon replacement finder.</p>
+                <h2>huongdang.vercel.app</h2>
+                <p>
+                    This website will be my playground to learn web development,
+                    and it'll always be a work-in-progress.
+                </p>
+            </div>
+            <div className={styles.content}>
                 <h1>Catch me on. . .</h1>
                 <p>GitHub</p>
                 <p>LinkedIn</p>
