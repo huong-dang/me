@@ -1,0 +1,36 @@
+.heading {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.containerItem {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 5px;
+    background-color: #ceb1be;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.cardImage {
+    border-radius: 5%;
+}
+
+.watchIcon {
+    padding: 3px;
+}
+
+.watchIcon:hover {
+    background-color: #000;
+    border-radius: 45%;
+}

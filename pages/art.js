@@ -1,4 +1,5 @@
-// import styles from "./art.module.css";
+import styles from "../styles/Art.module.css";
+import NavButton from "../components/NavButton";
 
 const watchIcons = {
     hulu: {
@@ -133,18 +134,17 @@ const artRect = {
                 },
             ],
         },
-        // {
-        //     name: "New Girl",
-        //     url: "https://en.wikipedia.org/wiki/New_Girl",
-        //     imgUrl:
-        //         "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQrk46eIHJvqj-9eSW61p8OoxjAcHHZkQ5NFnyZJOYRH-lWp8sl",
-        //     watch: [
-        //         {
-        //             src: "https://www.netflix.com/watch/70196145?source=35",
-        //             srcName: "netflix",
-        //         },
-        //     ],
-        // },
+        {
+            name: "New Girl",
+            url: "https://en.wikipedia.org/wiki/New_Girl",
+            imgUrl: "/newgirl.jpeg",
+            watch: [
+                {
+                    src: "https://www.netflix.com/watch/70196145?source=35",
+                    srcName: "netflix",
+                },
+            ],
+        },
         {
             name: "Captain America: Civil War",
             url: "https://en.wikipedia.org/wiki/Captain_America:_Civil_War",
@@ -194,18 +194,6 @@ const artRect = {
                 },
             ],
         },
-        // {
-        //     name: "Jigsaw",
-        //     url: "https://www.netflix.com/title/80223685",
-        //     imgUrl:
-        //         "https://i.pinimg.com/originals/f1/8b/29/f18b299dffa0acf88e9bcd1e72f1960f.jpg",
-        //     watch: [
-        //         {
-        //             src: "https://www.netflix.com/title/80223685",
-        //             srcName: "netflix",
-        //         },
-        //     ],
-        // },
         {
             name: "Quarter-Life Crisis",
             url: "https://www.netflix.com/title/81157965",
@@ -270,42 +258,25 @@ const artRect = {
         },
     ],
 };
-const container = {
-    display: "flex",
-    displayDirection: "row",
-    justifyContent: "space-around",
-    flexWrap: "wrap",
-};
-const containerItem = {
-    display: "flex",
-    justifyContent: "center",
-};
-
-const mediaStyle = {
-    margin: "5px",
-    backgroundColor: "#ceb1be",
-    padding: "10px",
-    borderRadius: "5%",
-};
 
 export default function Art() {
     const media = artRect.media.map((media, idx) => {
         const watch = media.watch.map((w, idx) => {
             return (
-                <a href={w.src} key={idx} style={{ padding: "3px" }}>
+                <a href={w.src} key={idx} className={styles.watchIcon}>
                     <img src={watchIcons[w.srcName].imgUrl} alt={`name`} />
                 </a>
             );
         });
 
         return (
-            <div style={mediaStyle} key={idx}>
+            <div className={styles.card} key={idx}>
                 <img
-                    style={{ borderRadius: "5%" }}
+                    className={styles.cardImage}
                     src={media.imgUrl}
                     alt={`${media.name} movie image`}
                 />
-                <div style={containerItem}>{watch}</div>
+                <div className={styles.containerItem}>{watch}</div>
             </div>
         );
     });
@@ -320,10 +291,9 @@ export default function Art() {
 
     return (
         <div>
-            <h1 style={containerItem}>Media</h1>
-            <div style={container}>{media}</div>
-            {/* <h1 style={containerItem}>Books</h1>
-            <div style={container}>{books}</div> */}
+            <NavButton />
+            <h1 className={styles.heading}>Media</h1>
+            <div className={styles.container}>{media}</div>
         </div>
     );
 }
