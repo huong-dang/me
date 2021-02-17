@@ -27,5 +27,5 @@
 .container {
     display: flex;
     justify-content: flex-end;
-    padding: 5vh;
+    margin: 2vh;
 }
