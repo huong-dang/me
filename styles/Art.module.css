@@ -41,10 +41,10 @@
 }
 
 .cardContainer {
-    box-shadow: 15px 15px 0 0 #2d2d34;
     border-radius: 10px;
     background-color: #4e4d5c;
     margin-bottom: 5vh;
+    box-shadow: 12px 12px 0 0 #2d2d34;
 }
 
 .cardImage {
