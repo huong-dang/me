@@ -17,11 +17,12 @@
     display: inline-block;
     margin-top: 1vh;
     margin-right: 1vh;
-    font-size: 2vh;
+    font-size: 12px;
     border-color: #ebdfe5;
     color: #ffffff;
     cursor: default;
     font-weight: bold;
+    text-align: center;
 }
 
 /* .pill:hover {
@@ -52,7 +53,7 @@
 .cardHeader {
     border-radius: 10px 10px 0 0;
     color: #2d2d34;
-    height: 10vh;
+    height: 8vh;
     background-color: #ebdfe5;
     display: flex;
     justify-content: center;

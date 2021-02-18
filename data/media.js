@@ -253,6 +253,7 @@ export const artRec = {
         //             srcName: "",
         //         },
         //     ],
+        //     tags: [],
         // },
     ],
     books: [
