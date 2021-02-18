@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-
 .heading {
     color: #ffffff;
     text-align: center;
-    font-family: "Roboto", sans-serif;
     text-shadow: 5px 5px #4e4d5c;
 }
 
@@ -11,6 +8,28 @@
     display: flex;
     justify-content: center;
 }
+
+.pill {
+    border-style: solid;
+    border-radius: 20px;
+    border-width: thin;
+    padding: 1vh;
+    display: inline-block;
+    margin-top: 1vh;
+    margin-right: 1vh;
+    font-size: 2vh;
+    border-color: #ebdfe5;
+    color: #ffffff;
+    cursor: default;
+    font-weight: bold;
+}
+
+/* .pill:hover {
+    cursor: pointer;
+    background-color: #4e4d5c;
+    color: #ffffff;
+    border-color: #4e4d5c;
+} */
 
 .container {
     display: flex;
@@ -45,6 +64,7 @@
     background-color: #4e4d5c;
     margin-bottom: 5vh;
     box-shadow: 12px 12px 0 0 #2d2d34;
+    max-width: 250px;
 }
 
 .cardImage {
