@@ -19,14 +19,44 @@
 }
 
 .card {
-    margin: 5px;
+    /* margin: 5px; */
     background-color: #ceb1be;
     padding: 10px;
-    border-radius: 5%;
+    border-radius: 0 0 10px 10px;
+}
+
+.cardHeaderText {
+    padding-top: 4vh;
+    text-align: center;
+}
+
+.cardHeader {
+    border-radius: 10px 10px 0 0;
+    color: #f1e4e8;
+    height: 10vh;
+    background-color: #4e4d5c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer {
+    box-shadow: 10px 10px 0 #2d2d34;
+    border-radius: 10px;
+    background-color: #4e4d5c;
+    margin-bottom: 5vh;
 }
 
 .cardImage {
-    border-radius: 5%;
+    border-radius: 10px;
+}
+
+.cardImage:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.cardImage:active {
+    opacity: 0.8;
 }
 
 .watchIcon {
@@ -34,6 +64,11 @@
 }
 
 .watchIcon:hover {
-    background-color: #000;
-    border-radius: 45%;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.watchIcon:active {
+    cursor: pointer;
+    opacity: 0.6;
 }

@@ -1,5 +1,9 @@
 import styles from "../styles/Art.module.css";
 import NavButton from "../components/NavButton";
+import Image from "next/image";
+
+const IMG_WIDTH = 230;
+const IMG_HEIGHT = 320;
 
 const watchIcons = {
     hulu: {
@@ -42,8 +46,7 @@ const artRect = {
                     srcName: "youtube",
                 },
             ],
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/0/05/Gone_Girl_Poster.jpg",
+            imgUrl: "/gonegirl.jpg",
         },
         {
             name: "Promising Young Woman",
@@ -55,14 +58,14 @@ const artRect = {
                     srcName: "youtube",
                 },
             ],
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/0/06/Promising_Young_Woman_poster.jpg",
+            imgUrl: "/promising.jpg",
+            imgWidth: 220,
+            imgHeight: 326,
         },
         {
             name: "The Handmaiden",
             url: "https://en.wikipedia.org/wiki/The_Handmaiden",
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/a/a2/The_Handmaiden_film.png",
+            imgUrl: "/handmaiden.png",
             watch: [
                 {
                     src:
@@ -75,8 +78,7 @@ const artRect = {
             name: "God's Own Country",
             url:
                 "https://en.wikipedia.org/wiki/God%27s_Own_Country_(2017_film)",
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/1/14/God%27s_Own_Country_%282017_film%29.png",
+            imgUrl: "/godowncountry.png",
             watch: [
                 {
                     src:
@@ -92,8 +94,7 @@ const artRect = {
         {
             name: "The Hate U Give",
             url: "https://en.wikipedia.org/wiki/The_Hate_U_Give_(film)",
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/b/bc/The_Hate_U_Give_poster.png",
+            imgUrl: "/thehateugive.png",
             watch: [
                 {
                     src:
@@ -109,8 +110,7 @@ const artRect = {
         {
             name: "Dear White People",
             url: "https://en.wikipedia.org/wiki/Dear_White_People_(TV_series)",
-            imgUrl:
-                "http://t1.gstatic.com/images?q=tbn:ANd9GcSpBWWHMsj7Sm1sSGqxijzHe6JuLRt-YdbXTVYoF7d6lisvb6Bc",
+            imgUrl: "/dearwhitepeople.jpeg",
             watch: [
                 {
                     src: "https://www.netflix.com/watch/80095698?source=35",
@@ -121,8 +121,7 @@ const artRect = {
         {
             name: "Train to Busan",
             url: "https://en.wikipedia.org/wiki/Train_to_Busan",
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/9/95/Train_to_Busan.jpg",
+            imgUrl: "/trantobusan.jpg",
             watch: [
                 {
                     src: "http://www.youtube.com/watch?v=-4TqmSVavZk",
@@ -148,8 +147,7 @@ const artRect = {
         {
             name: "Captain America: Civil War",
             url: "https://en.wikipedia.org/wiki/Captain_America:_Civil_War",
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/5/53/Captain_America_Civil_War_poster.jpg",
+            imgUrl: "/civilwar.jpg",
             watch: [
                 {
                     src:
@@ -161,8 +159,7 @@ const artRect = {
         {
             name: "The Half of It",
             url: "https://en.wikipedia.org/wiki/The_Half_of_It",
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/7/71/The_Half_of_It_poster.jpeg",
+            imgUrl: "/thehalfofit.jpeg",
             watch: [
                 {
                     src: "https://www.netflix.com/watch/81005150?source=35",
@@ -173,8 +170,7 @@ const artRect = {
         {
             name: "Dear Ex",
             url: "https://en.wikipedia.org/wiki/Dear_Ex",
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/6/66/Dear_Ex_Netflix_Edition_poster.jpg",
+            imgUrl: "/dearex.jpg",
             watch: [
                 {
                     src: "https://www.netflix.com/watch/81045891?source=35",
@@ -185,8 +181,7 @@ const artRect = {
         {
             name: "Homecoming King",
             url: "https://en.wikipedia.org/wiki/Hasan_Minhaj:_Homecoming_King",
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/en/e/e5/Hasan_Minhaj%2C_Homecoming_King.jpeg",
+            imgUrl: "/homecomingking.jpeg",
             watch: [
                 {
                     src: "https://www.netflix.com/watch/80134781?source=35",
@@ -263,20 +258,33 @@ export default function Art() {
     const media = artRect.media.map((media, idx) => {
         const watch = media.watch.map((w, idx) => {
             return (
-                <a href={w.src} key={idx} className={styles.watchIcon}>
-                    <img src={watchIcons[w.srcName].imgUrl} alt={`name`} />
-                </a>
+                <img
+                    src={watchIcons[w.srcName].imgUrl}
+                    alt={`name`}
+                    onClick={() => window.open(w.src, "_blank")}
+                    key={idx}
+                    className={styles.watchIcon}
+                />
             );
         });
 
         return (
-            <div className={styles.card} key={idx}>
-                <img
-                    className={styles.cardImage}
-                    src={media.imgUrl}
-                    alt={`${media.name} movie image`}
-                />
-                <div className={styles.containerItem}>{watch}</div>
+            <div
+                className={styles.cardContainer}
+                onClick={() => window.open(media.url, "_blank")}
+                key={idx}
+            >
+                <div className={styles.cardHeader}>{media.name}</div>
+                <div className={styles.card}>
+                    <Image
+                        className={styles.cardImage}
+                        src={media.imgUrl}
+                        alt={`${media.name} movie image`}
+                        width={IMG_WIDTH}
+                        height={IMG_HEIGHT}
+                    />
+                    <div className={styles.containerItem}>{watch}</div>
+                </div>
             </div>
         );
     });
