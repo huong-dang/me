@@ -79,7 +79,7 @@ export const artRec = {
                     srcName: "vudu",
                 },
             ],
-            tags: [tags.movie, tags.thriller, tags.lgbtq],
+            tags: [tags.movie, tags.thriller, tags.lgbtq, tags.dark],
         },
         {
             name: "God's Own Country",

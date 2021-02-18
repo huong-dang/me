@@ -36,7 +36,11 @@ export default function Art() {
                     />
                     <div className={styles.containerItem}>{watch}</div>
                     {media.tags.map((tag, idx) => {
-                        return <div className={styles.pill}>{tag}</div>;
+                        return (
+                            <div className={styles.pill} key={idx}>
+                                {tag}
+                            </div>
+                        );
                     })}
                 </div>
             </div>
