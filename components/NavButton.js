@@ -6,8 +6,9 @@ import Head from "next/head";
 
 export const navOptions = {
     "/": "Home.",
-    "/art": "Art.",
-    "/blog": "Blog.",
+    "/media": "Media.",
+    // "/blog": "Blog.",
+    "/books": "Books.",
 };
 
 function NavButton({ router }) {

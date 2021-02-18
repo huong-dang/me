@@ -58,7 +58,7 @@ export default function Art() {
     return (
         <div>
             <NavButton />
-            <h1 className={styles.heading}>Media</h1>
+            <h1 className={styles.heading}>Media Recs</h1>
             <div className={styles.container}>{media}</div>
         </div>
     );
