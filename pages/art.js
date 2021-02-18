@@ -201,7 +201,7 @@ const artRect = {
             ],
         },
         {
-            name: "What Kind of Asian Are You",
+            name: "What Kind of Asian Are You?",
             url:
                 "https://www.youtube.com/watch?v=VoP0ox_Jw_w&ab_channel=ButtonPoetry",
             imgUrl: "/alex.jpg",
@@ -269,12 +269,10 @@ export default function Art() {
         });
 
         return (
-            <div
-                className={styles.cardContainer}
-                onClick={() => window.open(media.url, "_blank")}
-                key={idx}
-            >
-                <div className={styles.cardHeader}>{media.name}</div>
+            <div className={styles.cardContainer} key={idx}>
+                <div className={styles.cardHeader}>
+                    <b>{media.name}</b>
+                </div>
                 <div className={styles.card}>
                     <Image
                         className={styles.cardImage}
@@ -282,6 +280,7 @@ export default function Art() {
                         alt={`${media.name} movie image`}
                         width={IMG_WIDTH}
                         height={IMG_HEIGHT}
+                        onClick={() => window.open(media.url, "_blank")}
                     />
                     <div className={styles.containerItem}>{watch}</div>
                 </div>
