@@ -1,13 +1,22 @@
 .content {
     padding-left: 5vh;
     padding-right: 5vh;
-    color: white;
     border-style: solid;
     border-width: thin;
     border-radius: 30px;
     margin-left: 200px;
     margin-right: 200px;
     margin-bottom: 10px;
+    color: white;
+}
+
+.content:hover {
+    color: black;
+    border-color: var(--light-pink);
+    cursor: pointer;
+}
+
+    opacity: 0.8;
 }
 
 @media only screen and (max-width: 768px) {
