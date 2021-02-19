@@ -1,11 +1,11 @@
-import NavButton from "../components/NavButton";
-import styles from "../styles/Art.module.css";
+import NavMenu from "../components/NavMenu";
+import Heading from "../components/Heading";
 
 export default function Books() {
     return (
         <div>
-            <NavButton />
-            <h1 className={styles.heading}>Book Recs</h1>
+            <NavMenu />
+            <Heading text="Book Recs" />
         </div>
     );
 }

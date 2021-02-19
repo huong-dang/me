@@ -1,10 +1,10 @@
-import NavButton from "../components/NavButton";
+import NavMenu from "../components/NavMenu";
 import styles from "../styles/Index.module.css";
 
 export default function Home() {
     return (
         <div>
-            <NavButton />
+            <NavMenu />
             <div className={styles.content}>
                 <h1>Let me introduce myself. . .</h1>
                 <p>

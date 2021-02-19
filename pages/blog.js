@@ -1,9 +1,11 @@
-import NavButton from "../components/NavButton";
+import NavMenu from "../components/NavMenu";
+import Heading from "../components/Heading";
 
-export default function Home() {
+export default function Blog() {
     return (
         <div>
-            <NavButton />
+            <NavMenu />
+            <Heading text="Ma Blog" />
         </div>
     );
 }
