@@ -5,7 +5,7 @@ export default function Books() {
     return (
         <div>
             <NavMenu />
-            <Heading text="Book Recs" />
+            <Heading text="Book Recs 📚" />
         </div>
     );
 }

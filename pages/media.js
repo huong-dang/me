@@ -42,7 +42,7 @@ export default function Media() {
     return (
         <div>
             <NavMenu />
-            <Heading text="Media Recs" />
+            <Heading text="Media Recs 🎥" />
             <div className="container">{media}</div>
         </div>
     );

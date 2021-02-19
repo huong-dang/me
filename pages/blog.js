@@ -5,7 +5,7 @@ export default function Blog() {
     return (
         <div>
             <NavMenu />
-            <Heading text="Ma Blog" />
+            <Heading text="Blog 💭" />
         </div>
     );
 }

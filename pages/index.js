@@ -1,6 +1,7 @@
 import NavMenu from "../components/NavMenu";
 import Heading from "../components/Heading";
 import styles from "../styles/Index.module.css";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -8,14 +9,16 @@ export default function Home() {
             <NavMenu />
             <Heading text="Welcome ☀️" />
 
-            <div className={styles.content}>
-                <p>
-                    Hi! I'm Huong. I'm an early-career software engineer with
-                    experience building web applications and developing APIs.
-                    Originally from sunny Florida, I now live and work in
-                    Virginia.
-                </p>
-            </div>
+            <Link href="/post/name">
+                <div className={styles.content}>
+                    <p>
+                        Hi! I'm Huong. I'm an early-career software engineer
+                        with experience building web applications and developing
+                        APIs. Originally from sunny Florida, I now live and work
+                        in Virginia.
+                    </p>
+                </div>
+            </Link>
 
             <div className={styles.content}>
                 <h2>My current projects</h2>
