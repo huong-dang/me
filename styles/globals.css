@@ -23,3 +23,10 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+@media only screen and (min-width: 756px) {
+    .container {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
