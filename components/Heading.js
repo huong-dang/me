@@ -4,7 +4,7 @@ export default function Heading({ text }) {
             {text}
             <style jsx>{`
                 .heading {
-                    color: #ffffff;
+                    color: white;
                     text-align: center;
                     text-shadow: 5px 5px #4e4d5c;
                 }

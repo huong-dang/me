@@ -5,7 +5,6 @@ class CardBody extends Component {
             <div className="cardBody">
                 <style jsx>{`
                     .cardBody {
-                        background-color: #ceb1be;
                         padding: 10px;
                         border-radius: 0 0 10px 10px;
                     }

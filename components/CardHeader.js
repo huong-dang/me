@@ -4,9 +4,9 @@ export default function CardHeader({ text }) {
             <style jsx>{`
                 .cardHeader {
                     border-radius: 10px 10px 0 0;
-                    color: #2d2d34;
+                    color: var(--dark-grey);
                     height: 8vh;
-                    background-color: #ebdfe5;
+                    background-color: var(--light-pink);
                     display: flex;
                     justify-content: center;
                     align-items: center;
