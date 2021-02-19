@@ -9,6 +9,7 @@
     cursor: pointer;
     margin-left: 1vh;
     padding: 1vh;
+    background-color: var(--dark-pink);
 }
 
 .button:hover {
