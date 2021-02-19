@@ -1,65 +1,49 @@
-import styles from "../styles/Art.module.css";
-import NavButton from "../components/NavButton";
-import Image from "next/image";
-import { artRec, watchIcons, tags } from "../data/media";
+import NavMenu from "../components/NavMenu";
+import WatchIcon from "../components/WatchIcon";
+import Heading from "../components/Heading";
+import CardHeader from "../components/CardHeader";
+import Pill from "../components/Pill";
+import Card from "../components/Card";
+import CardBody from "../components/CardBody";
+import CardImage from "../components/CardImage";
+import { artRec, watchIcons } from "../data/media";
 
-const IMG_WIDTH = 230;
-const IMG_HEIGHT = 320;
-
-export default function Art() {
+export default function Media() {
     const media = artRec.media.map((media, idx) => {
         const watch = media.watch.map((w, idx) => {
             return (
-                <img
-                    src={watchIcons[w.srcName].imgUrl}
-                    alt={`name`}
-                    onClick={() => window.open(w.src, "_blank")}
+                <WatchIcon
                     key={idx}
-                    className={styles.watchIcon}
+                    url={w.src}
+                    imgUrl={watchIcons[w.srcName].imgUrl}
+                    altText={`${w.srcName} icon`}
                 />
             );
         });
 
         return (
-            <div className={styles.cardContainer} key={idx}>
-                <div className={styles.cardHeader}>
-                    <b>{media.name}</b>
-                </div>
-                <div className={styles.card}>
-                    <Image
-                        className={styles.cardImage}
-                        src={media.imgUrl}
-                        alt={`${media.name} movie image`}
-                        width={IMG_WIDTH}
-                        height={IMG_HEIGHT}
-                        onClick={() => window.open(media.url, "_blank")}
+            <Card key={idx}>
+                <CardHeader text={media.name} />
+                <CardBody>
+                    <CardImage
+                        imgUrl={media.imgUrl}
+                        altText={`${media.name} movie image`}
+                        clickUrl={media.url}
                     />
-                    <div className={styles.containerItem}>{watch}</div>
+                    <div className="containerItem">{watch}</div>
                     {media.tags.map((tag, idx) => {
-                        return (
-                            <div className={styles.pill} key={idx}>
-                                {tag}
-                            </div>
-                        );
+                        return <Pill text={tag} key={idx} />;
                     })}
-                </div>
-            </div>
+                </CardBody>
+            </Card>
         );
     });
 
-    // const books = artRec.books.map((book, idx) => {
-    //     return (
-    //         <div key={idx}>
-    //             <img src={book.imgUrl} alt={`${book.title} book image`} />
-    //         </div>
-    //     );
-    // });
-
     return (
         <div>
-            <NavButton />
-            <h1 className={styles.heading}>Media Recs</h1>
-            <div className={styles.container}>{media}</div>
+            <NavMenu />
+            <Heading text="Media Recs" />
+            <div className="container">{media}</div>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/NavButton.module.css";
+import styles from "../styles/NavMenu.module.css";
 import React, { useState } from "react";
 import { withRouter } from "next/router";
 import Head from "next/head";
@@ -7,11 +7,11 @@ import Head from "next/head";
 export const navOptions = {
     "/": "Home.",
     "/media": "Media.",
-    // "/blog": "Blog.",
+    "/blog": "Blog.",
     "/books": "Books.",
 };
 
-function NavButton({ router }) {
+function NavMenu({ router }) {
     const currentPage = router.pathname;
     const [hideOptions, setHideOptions] = useState(true);
 
@@ -60,4 +60,4 @@ function NavButton({ router }) {
     );
 }
 
-export default withRouter(NavButton);
+export default withRouter(NavMenu);

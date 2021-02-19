@@ -12,3 +12,14 @@ body {
 * {
     box-sizing: border-box;
 }
+
+.containerItem {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
