@@ -1,4 +1,18 @@
 .content {
     padding-left: 5vh;
     padding-right: 5vh;
+    color: white;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 }
