@@ -11,11 +11,13 @@
 }
 
 .content:hover {
+    background-color: var(--light-pink);
     color: black;
     border-color: var(--light-pink);
     cursor: pointer;
 }
 
+.content:active {
     opacity: 0.8;
 }
 
