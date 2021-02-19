@@ -10,7 +10,7 @@
     color: white;
 }
 
-.content:hover {
+/* .content:hover {
     background-color: var(--light-pink);
     color: black;
     border-color: var(--light-pink);
@@ -19,7 +19,7 @@
 
 .content:active {
     opacity: 0.8;
-}
+} */
 
 @media only screen and (max-width: 768px) {
     .content {
