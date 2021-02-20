@@ -6,15 +6,14 @@ export default function Pill({ text }) {
                     border-style: solid;
                     border-radius: 20px;
                     border-width: thin;
-                    padding: 1vh;
+                    padding: 5px;
                     display: inline-block;
-                    margin-top: 1vh;
-                    margin-right: 1vh;
+                    margin-top: 5px;
+                    margin-right: 5px;
                     font-size: 12px;
                     border-color: white;
                     color: white;
                     cursor: default;
-                    font-weight: bold;
                     text-align: center;
                 }
             `}</style>
