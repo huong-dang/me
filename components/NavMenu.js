@@ -24,7 +24,6 @@ function NavMenu() {
     return (
         <div className={styles.container}>
             <Head>
-                <html lang="en" />
                 <title>Huong 🌻</title>
             </Head>
             {menu}
