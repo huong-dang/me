@@ -6,22 +6,22 @@ import Pill from "../components/Pill";
 import Card from "../components/Card";
 import CardBody from "../components/CardBody";
 import CardImage from "../components/CardImage";
-import { artRec, watchIcons, tags } from "../data/media";
+import { media, watchIcons, tags } from "../data/media";
 import { useState } from "react";
 export default function Media() {
     const [showFilter, setShowFilter] = useState(false);
     const [filter, setFilter] = useState([]);
     const filterOptions = Object.keys(tags);
 
-    let mediaRecs = artRec.media;
+    let mediaRecs = [...media];
     if (filter.length > 0) {
         const filterValues = filter.map((f) => tags[f]);
-        mediaRecs = artRec.media.filter((m) => {
+        mediaRecs = mediaRecs.filter((m) => {
             return filterValues.some((f) => m.tags.includes(f));
         });
     }
 
-    const media = mediaRecs.map((media, idx) => {
+    const myMedia = mediaRecs.map((media, idx) => {
         const watch = media.watch.map((w, idx) => {
             return (
                 <WatchIcon
@@ -184,8 +184,8 @@ export default function Media() {
                     );
                 })}
             </div>
-            <p>Showing {media.length} items</p>
-            <div className="container">{media}</div>
+            <p>Showing {myMedia.length} items</p>
+            <div className="container">{myMedia}</div>
         </div>
     );
 }
