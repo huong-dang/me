@@ -12,9 +12,16 @@ export default function Media() {
     const [showFilter, setShowFilter] = useState(false);
     const [filter, setFilter] = useState([]);
     const [filterOptions, setFilterOptions] = useState(Object.keys(tags));
-    const [art, setArtOptions] = useState(artRec.media);
 
-    const media = art.map((media, idx) => {
+    let mediaRecs = artRec.media;
+    if (filter.length > 0) {
+        const filterValues = filter.map((f) => tags[f]);
+        mediaRecs = artRec.media.filter((m) => {
+            return filterValues.some((f) => m.tags.includes(f));
+        });
+    }
+
+    const media = mediaRecs.map((media, idx) => {
         const watch = media.watch.map((w, idx) => {
             return (
                 <WatchIcon
@@ -52,23 +59,6 @@ export default function Media() {
                 onClick={() => {
                     setFilter([...filter, t]);
                     setFilterOptions([...filterOptions].filter((v) => v !== t));
-                    // const result = [...art].filter((m) => {
-                    //     let res = false;
-                    //     console.log(`FILTER ${filter}`);
-
-                    //     for (let i = 0; i < m.tags.length; i++) {
-                    //         console.log(`tag ${m.tags[i]}`);
-                    //         console.log(`filter ${filter}`);
-                    //         if (filter.includes(m.tags[i])) {
-                    //             console.log("whoot!");
-                    //             res = true;
-                    //         }
-                    //         console.log("nooo!");
-                    //     }
-                    //     return res;
-                    // });
-                    // console.log(result);
-                    // setArtOptions(result);
                 }}
             >
                 <style jsx>{`
