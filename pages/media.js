@@ -65,11 +65,13 @@ export default function Media() {
                 <style jsx>{`
                     .search-text-show {
                         padding: 2px 0px 2px 5px;
+                        transition: background-color 0.5s ease;
+                        border-radius: 12px;
+                        height: 25px;
                     }
                     .search-text-show:hover {
                         border-style: solid;
                         border-width: thin;
-                        border-radius: 12px;
                         background-color: var(--pink);
                         cursor: pointer;
                         border-color: var(--pink);
@@ -133,10 +135,11 @@ export default function Media() {
                     color: white;
                     cursor: default;
                     align-items: center;
-                    padding: 3px 3px 3px 5px;
+                    padding: 3px 5px 3px 5px;
                     margin-right: 5px;
                     margin-bottom: 5px;
                     background-color: var(--pink);
+                    transition: background-color 0.5s ease;
                 }
 
                 .pill:hover {
@@ -176,7 +179,7 @@ export default function Media() {
                                 setFilter([...filter].filter((v) => v != f));
                             }}
                         >
-                            {tags[f]}
+                            {`${tags[f]} x`}
                         </div>
                     );
                 })}
