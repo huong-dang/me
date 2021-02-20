@@ -10,8 +10,8 @@ import { artRec, watchIcons, tags } from "../data/media";
 import { useState } from "react";
 export default function Media() {
     const [showFilter, setShowFilter] = useState(false);
-    const [filter, setFilter] = useState([]);
-    const [filterOptions, setFilterOptions] = useState(Object.keys(tags));
+    const [filter, setFilter] = useState(["thriller", "blhistory"]);
+    const filterOptions = Object.keys(tags);
 
     let mediaRecs = artRec.media;
     if (filter.length > 0) {
@@ -57,15 +57,27 @@ export default function Media() {
                 className={`search-text${showFilter ? "-show" : ""}`}
                 key={idx}
                 onClick={() => {
-                    setFilter([...filter, t]);
-                    setFilterOptions([...filterOptions].filter((v) => v !== t));
+                    if (!filter.includes(t)) {
+                        setFilter([...filter, t]);
+                    }
                 }}
             >
                 <style jsx>{`
                     .search-text-show {
-                        border-style: solid none none none;
-                        border-width: thin;
                         padding: 2px 0px 2px 5px;
+                    }
+                    .search-text-show:hover {
+                        border-style: solid;
+                        border-width: thin;
+                        border-radius: 12px;
+                        background-color: var(--pink);
+                        cursor: pointer;
+                        border-color: var(--pink);
+                        border-color: white;
+                    }
+                    .search-text-show:active {
+                        background-color: var(--light-pink);
+                        color: var(--dark-pink);
                     }
                     .search-text {
                         display: none;
@@ -85,12 +97,17 @@ export default function Media() {
                     display: flex;
                     justify-content: center;
                     flex-wrap: wrap;
+                    margin-left: 75px;
+                    margin-right: 75px;
+                }
+                .filter:hover {
+                    cursor: pointer;
                 }
 
-                @media only screen and (max-width: 768px) {
+                @media only screen and (max-width: 600px) {
                     .filter {
-                        margin-left: 75px;
-                        margin-right: 75px;
+                        margin-left: 0px;
+                        margin-right: 0px;
                     }
                 }
 
@@ -101,8 +118,43 @@ export default function Media() {
                     width: 100%;
                     color: white;
                 }
+
                 .filterText {
                     padding: 5px 0px 5px 5px;
+                }
+
+                .pill {
+                    border-style: solid;
+                    border-radius: 20px;
+                    border-width: thin;
+                    display: inline-flex;
+                    font-size: 12px;
+                    border-color: white;
+                    color: white;
+                    cursor: default;
+                    align-items: center;
+                    padding: 3px 3px 3px 5px;
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                    background-color: var(--pink);
+                }
+
+                .pill:hover {
+                    border-style: solid;
+                    border-width: thin;
+                    background-color: var(--light-pink);
+                    color: var(--dark-pink);
+                    border-color: var(--light-pink);
+                    cursor: pointer;
+                }
+                .pill:active {
+                    opacity: 0.5;
+                }
+
+                p {
+                    text-align: center;
+                    color: white;
+                    font-size: 12px;
                 }
             `}</style>
             <NavMenu />
@@ -115,10 +167,21 @@ export default function Media() {
                 </div>
             </div>
             <div className="filter">
-                {filter.map((f, idx) => (
-                    <Pill text={tags[f]} key={idx} />
-                ))}
+                {filter.map((f, idx) => {
+                    return (
+                        <div
+                            className="pill"
+                            key={idx}
+                            onClick={() => {
+                                setFilter([...filter].filter((v) => v != f));
+                            }}
+                        >
+                            {tags[f]}
+                        </div>
+                    );
+                })}
             </div>
+            <p>Showing {media.length} items</p>
             <div className="container">{media}</div>
         </div>
     );
