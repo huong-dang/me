@@ -10,7 +10,7 @@ import { artRec, watchIcons, tags } from "../data/media";
 import { useState } from "react";
 export default function Media() {
     const [showFilter, setShowFilter] = useState(false);
-    const [filter, setFilter] = useState(["thriller", "blhistory"]);
+    const [filter, setFilter] = useState([]);
     const filterOptions = Object.keys(tags);
 
     let mediaRecs = artRec.media;
