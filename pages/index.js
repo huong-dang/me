@@ -63,8 +63,8 @@ export default function Home() {
 
                 .content {
                     color: white;
-                    margin-left: 10px;
-                    margin-right: 10px;
+                    margin-left: 15px;
+                    margin-right: 15px;
                 }
 
                 @media only screen and (min-width: 768px) {
