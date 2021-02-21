@@ -1,13 +1,7 @@
 .content {
-    padding-left: 5vh;
-    padding-right: 5vh;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 30px;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 10px;
     color: white;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 /* .content:hover {
@@ -20,10 +14,3 @@
 .content:active {
     opacity: 0.8;
 } */
-
-@media only screen and (max-width: 768px) {
-    .content {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}

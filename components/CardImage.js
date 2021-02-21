@@ -23,14 +23,15 @@ export default function CardImage({
                     opacity: 0.8;
                 }
             `}</style>
-            <Image
-                className="cardImg"
-                src={imgUrl}
-                alt={altText}
-                width={IMG_WIDTH}
-                height={IMG_HEIGHT}
-                onClick={() => window.open(clickUrl, "_blank")}
-            />
+            <a href={clickUrl} target="_blank">
+                <Image
+                    className="cardImg"
+                    src={imgUrl}
+                    alt={altText}
+                    width={IMG_WIDTH}
+                    height={IMG_HEIGHT}
+                />
+            </a>
         </div>
     );
 }

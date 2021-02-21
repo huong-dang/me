@@ -241,6 +241,28 @@ export const media = [
         ],
         tags: [tags.comedy, tags.dark],
     },
+    {
+        name: "Hidden Figures",
+        url: "https://en.wikipedia.org/wiki/Hidden_Figures",
+        imgUrl: "/hiddenfigures.jpg",
+        watch: [
+            {
+                src:
+                    "https://www.disneyplus.com/video/4b5741a2-7119-46f0-a453-7876b98d9a0a?pid=AssistantSearch",
+                srcName: "disney",
+            },
+            {
+                src:
+                    "https://www.hulu.com/watch/330cb891-2798-45a0-bf46-6debfa6e68d4",
+                srcName: "hulu",
+            },
+            {
+                src: "http://www.youtube.com/watch?v=U386EMeWo3I",
+                srcName: "youtube",
+            },
+        ],
+        tags: [tags.movie, tags.blhistory],
+    },
     // {
     //     name: "",
     //     url: "",

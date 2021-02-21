@@ -5,8 +5,8 @@ import Head from "next/head";
 export const navOptions = {
     "/": "Home.",
     "/media": "Media.",
-    "/blog": "Blog.",
-    "/books": "Books.",
+    // "/blog": "Blog.",
+    // "/books": "Books.",
 };
 
 function NavMenu() {

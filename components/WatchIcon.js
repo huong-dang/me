@@ -20,12 +20,9 @@ export default function WatchIcon({
                     opacity: 0.6;
                 }
             `}</style>
-            <img
-                src={imgUrl}
-                alt={altText}
-                onClick={() => window.open(url, "_blank")}
-                className="watchIcon"
-            />
+            <a href={url} target="_blank">
+                <img src={imgUrl} alt={altText} className="watchIcon" />
+            </a>
         </div>
     );
 }
