@@ -18,7 +18,7 @@ export default function Home() {
                     border-style: solid;
                     border-width: thin;
                     padding: 5px;
-                    border-color: var(--light-pink);
+                    border-color: var(--electric-blue);
                 }
                 .box {
                     display: flex;
@@ -35,7 +35,7 @@ export default function Home() {
                 }
 
                 .content {
-                    color: white;
+                    color: black;
                     margin-left: 15px;
                     margin-right: 15px;
                 }
@@ -86,18 +86,18 @@ export default function Home() {
                         cursor: pointer;
                         font-weight: bold;
                         font-size: 12px;
-                        color: var(--dark-grey);
+                        color: var(--charcoal);
                         transition: color 0.5s ease;
                     }
 
                     #show-all:hover,
                     #show-less:hover {
-                        color: var(--light-pink);
+                        color: var(--powder-blue);
                     }
 
                     #show-all:active,
                     #show-less:active {
-                        color: var(--pink);
+                        color: var(--electric-blue);
                     }
 
                     #show-all-hide,

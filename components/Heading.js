@@ -4,17 +4,17 @@ export default function Heading({ text, special = false }) {
             {text}
             <style jsx>{`
                 .heading {
-                    color: white;
+                    color: var(--electric-blue);
                     text-align: center;
-                    text-shadow: 4px 2px var(--dark-grey);
+                    text-shadow: 4px 2px var(--powder-blue);
                 }
 
                 .heading-special {
-                    color: white;
+                    color: var(--electric-blue);
                     text-align: center;
-                    text-shadow: 4px 2px var(--dark-grey);
+                    text-shadow: 4px 2px var(--powder-blue);
                     overflow: hidden; /* Ensures the content is not revealed until the animation */
-                    border-right: 15px solid var(--pink); /* The typwriter cursor */
+                    border-right: 15px solid var(--powder-blue); /* The typwriter cursor */
                     white-space: nowrap; /* Keeps the content on a single line */
                     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
                     letter-spacing: 0.1em; /* Adjust as needed */
@@ -39,7 +39,7 @@ export default function Heading({ text, special = false }) {
 
                 @keyframes animated-cursor {
                     from {
-                        border-right-color: var(--pink);
+                        border-right-color: var(--powder-blue);
                     }
                     to {
                         border-right-color: transparent;
