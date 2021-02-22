@@ -44,9 +44,6 @@ function NavMenu() {
                 }
 
                 @media only screen and (max-width: 600px) {
-                    .menu-container {
-                        justify-content: center;
-                    }
                     .button {
                         font-size: 16px;
                     }
