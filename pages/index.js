@@ -4,28 +4,6 @@ import LinkedInIcon from "../components/LinkedInIcon";
 import GitHubIcon from "../components/GitHubIcon";
 import { useState } from "react";
 
-const BIPOC = () => {
-    return (
-        <a href="https://www.thebipocproject.org/" target="_blank">
-            <style jsx>{`
-                a {
-                    color: var(--dark-grey);
-                    font-weight: bold;
-                    text-decoration: underline;
-                    cursor: pointer;
-                }
-                a:hover {
-                    color: var(--light-pink);
-                }
-                a:active {
-                    color: var(--pink);
-                }
-            `}</style>
-            BIPOC
-        </a>
-    );
-};
-
 export default function Home() {
     const [hideContent, setHideContent] = useState(true);
 
@@ -158,14 +136,17 @@ export default function Home() {
                 <p id={hideContent ? "more-hide" : ""}>
                     I love cultivating and being a part of a positive community
                     of engineers that share my priorities, namedly: increasing
-                    the representation of <BIPOC /> persons in tech, solutioning
-                    problems with the users in mind, and focusing on achieving
-                    results without overengineering. Tech should serve everyone,
-                    not just those who have historical and continual advantages
-                    to be at the table. I’m incredibly thankful that I get to
-                    wake up everyday and solve interesting problems, and I can’t
-                    wait to welcome more folks into this impactful and
-                    empowering field.
+                    the representation of{" "}
+                    <a href="https://www.thebipocproject.org/" target="_blank">
+                        BIPOC
+                    </a>{" "}
+                    persons in tech, solutioning problems with the users in
+                    mind, and focusing on achieving results without
+                    overengineering. Tech should serve everyone, not just those
+                    who have historical and continual advantages to be at the
+                    table. I’m incredibly thankful that I get to wake up
+                    everyday and solve interesting problems, and I can’t wait to
+                    welcome more folks into this impactful and empowering field.
                 </p>
                 <div
                     id={`show-less${hideContent ? "-hide" : ""}`}
