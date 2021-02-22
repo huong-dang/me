@@ -18,6 +18,7 @@ export default function Home() {
                     border-style: solid;
                     border-width: thin;
                     padding: 5px;
+                    border-color: var(--light-pink);
                 }
                 .box {
                     display: flex;
