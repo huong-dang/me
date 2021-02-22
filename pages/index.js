@@ -104,10 +104,6 @@ export default function Home() {
                     #more-hide {
                         display: none;
                     }
-
-                    p {
-                        margin-bottom: 5px;
-                    }
                 }
             `}</style>
             <NavMenu />
