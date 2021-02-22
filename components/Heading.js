@@ -6,7 +6,7 @@ export default function Heading({ text }) {
                 .heading {
                     color: white;
                     text-align: center;
-                    text-shadow: 5px 5px #4e4d5c;
+                    text-shadow: 5px 5px var(--dark-grey);
                 }
             `}</style>
         </h1>

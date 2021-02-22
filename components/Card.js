@@ -1,4 +1,4 @@
-export default function Card(props) {
+export default function Card({ children }) {
     return (
         <div className="cardContainer">
             <style jsx>{`
@@ -10,7 +10,7 @@ export default function Card(props) {
                     margin-bottom: 12px;
                 }
             `}</style>
-            {props.children}
+            {children}
         </div>
     );
 }

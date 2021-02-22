@@ -14,13 +14,6 @@ export default function Home() {
     return (
         <div className="page-container">
             <style jsx>{`
-                .my-border {
-                    border-bottom: solid;
-                    border-width: thin;
-                    color: var(--light-pink);
-                    margin-left: 50px;
-                    margin-right: 50px;
-                }
                 .box {
                     display: flex;
                     flex-wrap: wrap;
@@ -33,10 +26,6 @@ export default function Home() {
 
                 #works {
                     width: 64%;
-                }
-
-                .border {
-                    border: transparent;
                 }
 
                 .content {
@@ -193,7 +182,6 @@ export default function Home() {
                             and share their wishlists.
                         </p>
                     </div>
-                    <div className="border" />
                     <div className="boxItem">
                         <h3>Connect</h3>
                         <GitHubIcon />
