@@ -14,6 +14,11 @@ export default function Home() {
     return (
         <div className="page-container">
             <style jsx>{`
+                h3 {
+                    border-style: solid none none solid;
+                    border-width: thin;
+                    padding: 5px;
+                }
                 .box {
                     display: flex;
                     flex-wrap: wrap;
@@ -59,13 +64,9 @@ export default function Home() {
                     padding: 10px 5px 5px 10px;
                     border-width: thin;
                 }
-                h3 {
-                    text-decoration: underline;
-                }
 
                 h4 {
                     font-style: italic;
-                    cursor: pointer;
                 }
 
                 @media only screen and (min-width: 601px) {
@@ -148,15 +149,8 @@ export default function Home() {
                     Read less
                 </div>
                 <div className="box">
-                    <div className="boxItem">
-                        <h3>Skills</h3>
-                        <p>💻 React, Next, Express</p>
-                        <p>💻 MongoDB, Postgres</p>
-                        <p>💻 JavaScript, Python</p>
-                        <p>💻 Vercel, Heroku, AWS</p>
-                    </div>
                     <div id="works" className="boxItem">
-                        <h3>Projects</h3>
+                        <h3>PROJECTS</h3>
                         <a
                             href="https://github.com/huong-dang/me"
                             target="_blank"
@@ -187,7 +181,14 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="boxItem">
-                        <h3>Connect</h3>
+                        <h3>SKILLS</h3>
+                        <p>💻 React, Next, Express</p>
+                        <p>💻 MongoDB, Postgres</p>
+                        <p>💻 JavaScript, Python</p>
+                        <p>💻 Vercel, Heroku, AWS</p>
+                    </div>
+                    <div className="boxItem">
+                        <h3>CONNECT</h3>
                         <GitHubIcon />
                         <LinkedInIcon />
                     </div>
