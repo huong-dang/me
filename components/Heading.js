@@ -6,13 +6,13 @@ export default function Heading({ text, special = false }) {
                 .heading {
                     color: white;
                     text-align: center;
-                    text-shadow: 5px 5px var(--dark-grey);
+                    text-shadow: 4px 2px var(--dark-grey);
                 }
 
                 .heading-special {
                     color: white;
                     text-align: center;
-                    text-shadow: 5px 5px var(--dark-grey);
+                    text-shadow: 4px 2px var(--dark-grey);
                     overflow: hidden; /* Ensures the content is not revealed until the animation */
                     border-right: 15px solid var(--pink); /* The typwriter cursor */
                     white-space: nowrap; /* Keeps the content on a single line */
