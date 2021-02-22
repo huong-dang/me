@@ -7,7 +7,7 @@ export default function Card({ children }) {
                     background-color: var(--pink);
                     box-shadow: 12px 12px 0 0 var(--dark-grey);
                     max-width: 250px;
-                    margin-bottom: 12px;
+                    margin-bottom: 20px;
                 }
             `}</style>
             {children}
