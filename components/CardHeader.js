@@ -1,4 +1,4 @@
-export default function CardHeader({ text }) {
+export default function CardHeader({ children }) {
     return (
         <div className="cardHeader">
             <style jsx>{`
@@ -12,7 +12,7 @@ export default function CardHeader({ text }) {
                     align-items: center;
                 }
             `}</style>
-            <b>{text}</b>
+            <b>{children}</b>
         </div>
     );
 }

@@ -35,7 +35,7 @@ export default function Media() {
 
         return (
             <Card key={idx}>
-                <CardHeader text={media.name} />
+                <CardHeader>{media.name}</CardHeader>
                 <CardBody>
                     <CardImage
                         imgUrl={media.imgUrl}
