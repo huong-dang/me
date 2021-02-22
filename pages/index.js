@@ -110,7 +110,7 @@ export default function Home() {
                 }
             `}</style>
             <NavMenu />
-            <Heading text="Welcome ☀️" />
+            <Heading text="huong dang" special={true} />
             <div className="content">
                 <p>
                     Hello, I'm Huong! I'm a mid-level software engineer
