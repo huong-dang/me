@@ -34,7 +34,7 @@ export default function Home() {
     };
 
     return (
-        <div>
+        <div className="page-container">
             <style jsx>{`
                 .my-border {
                     border-bottom: solid;

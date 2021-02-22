@@ -91,7 +91,7 @@ export default function Media() {
     });
 
     return (
-        <div>
+        <div className="page-container">
             <style jsx>{`
                 .filter {
                     margin-top: 12px;

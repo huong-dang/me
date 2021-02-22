@@ -53,3 +53,7 @@ a:hover {
 a:active {
     color: var(--pink);
 }
+
+.page-container {
+    margin-bottom: 12px;
+}

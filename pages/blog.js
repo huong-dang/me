@@ -3,7 +3,7 @@ import Heading from "../components/Heading";
 
 export default function Blog() {
     return (
-        <div>
+        <div className="page-container">
             <NavMenu />
             <Heading text="Blog 💭" />
         </div>
