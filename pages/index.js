@@ -35,7 +35,7 @@ export default function Home() {
                 }
 
                 .content {
-                    color: white;
+                    color: #f4f4f9;
                     margin-left: 15px;
                     margin-right: 15px;
                 }

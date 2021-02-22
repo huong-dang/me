@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 :root {
-    --dark-pink: #b97375;
+    /* --dark-pink: #663335; */
+    --dark-pink: #4e4d5c;
     --dark-grey: #2d2d34;
     --pink: #ceb1be;
     --light-pink: #f1e4e8;
