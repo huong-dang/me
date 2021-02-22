@@ -15,7 +15,7 @@ export default function Home() {
         <div className="page-container">
             <style jsx>{`
                 h3 {
-                    border-style: solid none none solid;
+                    border-style: solid;
                     border-width: thin;
                     padding: 5px;
                 }
