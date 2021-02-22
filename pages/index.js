@@ -156,11 +156,6 @@ export default function Home() {
                     Read more
                 </div>
                 <p id={hideContent ? "more-hide" : ""}>
-                    Outside of work, I enjoy conquering hills with my trusty
-                    purple bike, dabbling in fingerstyle guitar, and reading a
-                    good enemies-to-lovers romance.
-                </p>
-                <p id={hideContent ? "more-hide" : ""}>
                     I love cultivating and being a part of a positive community
                     of engineers that share my priorities, namedly: increasing
                     the representation of <BIPOC /> persons in tech, solutioning
