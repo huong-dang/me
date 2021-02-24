@@ -51,8 +51,7 @@ function NavMenu() {
 
                 @media only screen and (min-width: 768px) {
                     .menu-container {
-                        margin-left: 100px;
-                        margin-right: 100px;
+                        margin-right: 120px;
                     }
                 }
             `}</style>

@@ -54,7 +54,7 @@ export default function Media() {
     const tagsDropdown = filterOptions.map((t, idx) => {
         return (
             <div
-                className={`search-text${showFilter ? "-show" : ""}`}
+                className={`search-text${showFilter ? "" : " search-hide"}`}
                 key={idx}
                 onClick={() => {
                     if (!filter.includes(t)) {
@@ -63,23 +63,23 @@ export default function Media() {
                 }}
             >
                 <style jsx>{`
-                    .search-text-show {
-                        padding: 2px 0px 2px 5px;
+                    .search-text {
                         transition: background-color 0.5s ease;
                         border-radius: 12px;
                         height: 25px;
+                        padding-left: 10px;
+                        display: flex;
+                        align-items: center;
                     }
-                    .search-text-show:hover {
-                        border-style: solid;
-                        border-width: thin;
+                    .search-text:hover {
                         background-color: var(--powder-blue);
                         cursor: pointer;
                     }
-                    .search-text-show:active {
+                    .search-text:active {
                         background-color: var(--electric-blue);
                         color: white;
                     }
-                    .search-text {
+                    .search-hide {
                         display: none;
                     }
                 `}</style>
@@ -91,38 +91,6 @@ export default function Media() {
     return (
         <div className="page-container">
             <style jsx>{`
-                .filter {
-                    margin-top: 12px;
-                    margin-bottom: 12px;
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    margin-left: 75px;
-                    margin-right: 75px;
-                }
-                .filter:hover {
-                    cursor: pointer;
-                }
-
-                @media only screen and (max-width: 600px) {
-                    .filter {
-                        margin-left: 0px;
-                        margin-right: 0px;
-                    }
-                }
-
-                .search {
-                    border-radius: 12px;
-                    border-width: thin;
-                    border-style: solid;
-                    width: 100%;
-                    color: black;
-                }
-
-                .filterText {
-                    padding: 5px 0px 5px 5px;
-                }
-
                 .pill {
                     border-style: solid;
                     border-radius: 20px;
@@ -133,8 +101,6 @@ export default function Media() {
                     cursor: default;
                     align-items: center;
                     padding: 3px 5px 3px 5px;
-                    margin-right: 5px;
-                    margin-bottom: 5px;
                     transition: background-color 0.5s ease;
                     background-color: var(--powder-blue);
                 }
@@ -155,17 +121,52 @@ export default function Media() {
                     color: black;
                     font-size: 12px;
                 }
+                .filter-bar {
+                    border-radius: 12px;
+                    border-width: thin;
+                    border-style: solid;
+                    color: black;
+                    margin-bottom: 10px;
+                }
+
+                .filter-bar-text {
+                    cursor: pointer;
+                    height: 25px;
+                    align-items: center;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                #filter-name {
+                    width: 80%;
+                }
+                #filter-x {
+                    width: 20%;
+                    text-align: right;
+                }
+                .selected-filters {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 5px;
+                }
             `}</style>
             <NavMenu />
             <Heading text="Media Recs 🎥" />
 
-            <div className="filter" onMouseOut={() => setShowFilter(false)}>
-                <div className="search" onMouseOver={() => setShowFilter(true)}>
-                    <div className="filterText">filter</div>
-                    {tagsDropdown}
+            <div
+                className="general-container filter-bar"
+                onClick={() => setShowFilter(!showFilter)}
+            >
+                <div className="filter-bar-text">
+                    <span id="filter-name">filter</span>{" "}
+                    <span id="filter-x">{showFilter ? "ʌ" : "v"}</span>
                 </div>
+                {tagsDropdown}
             </div>
-            <div className="filter">
+            <div className="selected-filters">
                 {filter.map((f, idx) => {
                     return (
                         <div
