@@ -5,8 +5,8 @@ export default function CardHeader({ children }) {
                 .cardHeader {
                     border-radius: 10px 10px 0 0;
                     height: 50px;
-                    color: var(--dark-grey);
-                    background-color: var(--light-pink);
+                    color: var(--off-white);
+                    background-color: var(--electric-blue);
                     display: flex;
                     justify-content: center;
                     align-items: center;

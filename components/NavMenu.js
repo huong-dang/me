@@ -16,36 +16,43 @@ function NavMenu() {
             <style jsx>{`
                 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
                 .button {
-                    border-color: white;
                     border-style: solid;
-                    color: white;
+                    color: var(--electric-blue);
                     font-family: "Roboto", sans-serif;
                     font-size: 20px;
-                    box-shadow: 5px 5px 0 var(--dark-grey);
+                    box-shadow: 5px 5px 0 var(--charcoal);
                     cursor: pointer;
                     margin-left: 1vh;
                     padding: 1vh;
-                    background-color: var(--dark-pink);
                     transition: background-color 0.5s ease;
                 }
 
                 .button:hover {
-                    background-color: var(--pink);
+                    background-color: var(--powder-blue);
                 }
 
                 .button:active {
-                    background-color: var(--light-grey);
+                    background-color: var(--charcoal);
+                    color: white;
+                    border-color: var(--charcoal);
                     text-decoration: underline;
                 }
                 .menu-container {
                     display: flex;
-                    justify-content: flex-end;
                     margin: 12px;
+                    justify-content: flex-end;
                 }
 
                 @media only screen and (max-width: 600px) {
                     .button {
                         font-size: 16px;
+                    }
+                }
+
+                @media only screen and (min-width: 768px) {
+                    .menu-container {
+                        margin-left: 100px;
+                        margin-right: 100px;
                     }
                 }
             `}</style>

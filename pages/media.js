@@ -72,14 +72,12 @@ export default function Media() {
                     .search-text-show:hover {
                         border-style: solid;
                         border-width: thin;
-                        background-color: var(--pink);
+                        background-color: var(--powder-blue);
                         cursor: pointer;
-                        border-color: var(--pink);
-                        border-color: white;
                     }
                     .search-text-show:active {
-                        background-color: var(--light-pink);
-                        color: var(--dark-pink);
+                        background-color: var(--electric-blue);
+                        color: white;
                     }
                     .search-text {
                         display: none;
@@ -118,7 +116,7 @@ export default function Media() {
                     border-width: thin;
                     border-style: solid;
                     width: 100%;
-                    color: white;
+                    color: black;
                 }
 
                 .filterText {
@@ -131,24 +129,22 @@ export default function Media() {
                     border-width: thin;
                     display: inline-flex;
                     font-size: 12px;
-                    border-color: white;
-                    color: white;
+                    color: black;
                     cursor: default;
                     align-items: center;
                     padding: 3px 5px 3px 5px;
                     margin-right: 5px;
                     margin-bottom: 5px;
-                    background-color: var(--pink);
                     transition: background-color 0.5s ease;
+                    background-color: var(--powder-blue);
                 }
 
                 .pill:hover {
                     border-style: solid;
                     border-width: thin;
-                    background-color: var(--light-pink);
-                    color: var(--dark-pink);
-                    border-color: var(--light-pink);
+                    color: white;
                     cursor: pointer;
+                    background-color: var(--electric-blue);
                 }
                 .pill:active {
                     opacity: 0.5;
@@ -156,7 +152,7 @@ export default function Media() {
 
                 p {
                     text-align: center;
-                    color: white;
+                    color: black;
                     font-size: 12px;
                 }
             `}</style>

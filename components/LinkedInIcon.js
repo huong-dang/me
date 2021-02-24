@@ -9,15 +9,17 @@ export default function LinkedInIcon() {
                     margin-right: 5px;
                     display: inline-block;
                     border-radius: 50%;
-                    border-style: transparent;
+                    border-style: solid;
                     padding: 10px 5px 5px 10px;
                     border-width: thin;
                     background-color: white;
                     transition: background-color 0.5s ease;
+                    border-color: var(--charcoal);
                 }
 
                 .connect:hover {
-                    background-color: var(--light-pink);
+                    background-color: var(--powder-blue);
+                    border-color: var(--electric-blue);
                     cursor: pointer;
                 }
 

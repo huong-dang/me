@@ -11,8 +11,7 @@ export default function Pill({ text }) {
                     margin-top: 5px;
                     margin-right: 5px;
                     font-size: 12px;
-                    border-color: white;
-                    color: white;
+                    color: var(--charcoal);
                     cursor: default;
                     text-align: center;
                 }
