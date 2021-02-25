@@ -264,11 +264,11 @@ export default function Media() {
                 onClick={() => setShowFilter(!showFilter)}
             >
                 <div className="filter-bar-text">
-                    <span className="bar-box">
+                    {/* <span className="bar-box">
                         <div className="bar">___</div>
                         <div className="bar">__</div>
                         <div className="bar">_</div>
-                    </span>
+                    </span> */}
                     <span id="filter-name">filter</span>{" "}
                     <span id="filter-x">{showFilter ? "ʌ" : "v"}</span>
                 </div>

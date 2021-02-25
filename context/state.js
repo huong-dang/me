@@ -3,17 +3,14 @@ import { useState, createContext, useContext } from "react";
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
-    const [showTrailer, setShowTrailer] = useState(true);
-    const defaultTrailer = "https://www.youtube.com/embed/u_17_kRZNFU";
-    const [trailerUrl, setTrailerUrl] = useState(
-        "https://www.youtube.com/embed/u_17_kRZNFU"
-    );
+    const [showTrailer, setShowTrailer] = useState(false);
+    const [trailerUrl, setTrailerUrl] = useState("");
 
     const updateShowTrailer = (trailer, trailerUrl) => {
         setShowTrailer(trailer);
         trailerUrl && trailerUrl.length > 0
             ? setTrailerUrl(trailerUrl)
-            : setTrailerUrl(defaultTrailer);
+            : setTrailerUrl("");
     };
 
     return (
