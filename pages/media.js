@@ -8,6 +8,7 @@ import CardBody from "../components/CardBody";
 import CardImage from "../components/CardImage";
 import { media, watchIcons, tags } from "../data/media";
 import { useState } from "react";
+import { useAppContext } from "../context/state";
 export default function Media() {
     const [showFilter, setShowFilter] = useState(false);
     const [filter, setFilter] = useState([]);
@@ -22,6 +23,8 @@ export default function Media() {
     }
 
     const myMedia = mediaRecs.map((media, idx) => {
+        const { updateShowTrailer } = useAppContext();
+
         const watch = media.watch.map((w, idx) => {
             return (
                 <WatchIcon
@@ -37,11 +40,17 @@ export default function Media() {
             <Card key={idx}>
                 <CardHeader>{media.name}</CardHeader>
                 <CardBody>
-                    <CardImage
-                        imgUrl={media.imgUrl}
-                        altText={`${media.name} movie image`}
-                        clickUrl={media.url}
-                    />
+                    <div
+                        onClick={() =>
+                            updateShowTrailer(true, media.trailerUrl)
+                        }
+                    >
+                        <CardImage
+                            imgUrl={media.imgUrl}
+                            altText={`${media.name} movie image`}
+                            clickUrl={media.url}
+                        />
+                    </div>
                     <div className="containerItem">{watch}</div>
                     {media.tags.map((tag, idx) => {
                         return <Pill text={tag} key={idx} />;
@@ -95,7 +104,7 @@ export default function Media() {
                     border-style: solid;
                     border-radius: 20px;
                     border-width: thin;
-                    display: inline-flex;
+                    display: flex;
                     font-size: 12px;
                     color: black;
                     cursor: default;
@@ -103,6 +112,8 @@ export default function Media() {
                     padding: 3px 5px 3px 5px;
                     transition: background-color 0.5s ease;
                     background-color: var(--powder-blue);
+                    margin-right: 5px;
+                    margin-bottom: 5px;
                 }
 
                 .pill:hover {
@@ -150,7 +161,13 @@ export default function Media() {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    gap: 5px;
+                }
+                .bar {
+                    height: 5px;
+                }
+                .bar-box {
+                    margin-bottom: 27px;
+                    margin-right: 5px;
                 }
             `}</style>
             <NavMenu />
@@ -161,6 +178,11 @@ export default function Media() {
                 onClick={() => setShowFilter(!showFilter)}
             >
                 <div className="filter-bar-text">
+                    <span className="bar-box">
+                        <div className="bar">___</div>
+                        <div className="bar">__</div>
+                        <div className="bar">_</div>
+                    </span>
                     <span id="filter-name">filter</span>{" "}
                     <span id="filter-x">{showFilter ? "ʌ" : "v"}</span>
                 </div>
