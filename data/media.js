@@ -51,6 +51,7 @@ export const media = [
         ],
         imgUrl: "/gonegirl.jpg",
         tags: [tags.movie, tags.thriller, tags.dark],
+        trailerUrl: "https://youtu.be/u_17_kRZNFU",
     },
     {
         name: "Promising Young Woman",
@@ -66,6 +67,8 @@ export const media = [
         imgWidth: 220,
         imgHeight: 326,
         tags: [tags.movie, tags.thriller, tags.dark],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=ZCpTaCE4hMM&ab_channel=YouTubeMovies",
     },
     {
         name: "The Handmaiden",
@@ -79,6 +82,8 @@ export const media = [
             },
         ],
         tags: [tags.movie, tags.thriller, tags.lgbtq, tags.dark],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=whldChqCsYk&t=1s&ab_channel=MagnoliaPictures%26MagnetReleasing",
     },
     {
         name: "God's Own Country",
@@ -96,6 +101,8 @@ export const media = [
             },
         ],
         tags: [tags.movie, tags.lgbtq],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=5C9B_FL3EG4&ab_channel=YouTubeMovies",
     },
     {
         name: "The Hate U Give",
@@ -113,6 +120,8 @@ export const media = [
             },
         ],
         tags: [tags.movie, tags.blhistory],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=NXy0H-EZR5s&ab_channel=YouTubeMovies",
     },
     {
         name: "Dear White People",
@@ -125,6 +134,8 @@ export const media = [
             },
         ],
         tags: [tags.tv, tags.blhistory],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=S6xjnsuIfA4&t=18s&ab_channel=ONEMedia",
     },
     {
         name: "Train to Busan",
@@ -141,6 +152,8 @@ export const media = [
             },
         ],
         tags: [tags.movie, tags.action],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=-4TqmSVavZk&ab_channel=YouTubeMovies",
     },
     {
         name: "New Girl",
@@ -153,6 +166,8 @@ export const media = [
             },
         ],
         tags: [tags.tv, tags.comedy],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=tnIMy44uqB8&list=EL8CTJPYIz0UA&index=1&ab_channel=NewGirl",
     },
     {
         name: "Captain America: Civil War",
@@ -166,6 +181,8 @@ export const media = [
             },
         ],
         tags: [tags.movie, tags.action],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=oroMCU8SaZE&ab_channel=YouTubeMovies",
     },
     {
         name: "The Half of It",
@@ -178,6 +195,8 @@ export const media = [
             },
         ],
         tags: [tags.movie, tags.lgbtq],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=B-yhF7IScUE&t=1s&ab_channel=Netflix",
     },
     {
         name: "Dear Ex",
@@ -190,6 +209,8 @@ export const media = [
             },
         ],
         tags: [tags.movie, tags.lgbtq],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=cZuDMECORFE&ab_channel=NetflixAsia",
     },
     {
         name: "Homecoming King",
@@ -202,6 +223,8 @@ export const media = [
             },
         ],
         tags: [tags.comedy],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=Fu-u5VldxVY&ab_channel=Netflix",
     },
     {
         name: "Quarter-Life Crisis",
@@ -214,6 +237,8 @@ export const media = [
             },
         ],
         tags: [tags.comedy],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=c7Zr4CdiyaY&ab_channel=NetflixIsAJoke",
     },
     {
         name: "What Kind of Asian Are You?",
@@ -228,6 +253,8 @@ export const media = [
             },
         ],
         tags: [tags.poetry],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=VoP0ox_Jw_w&ab_channel=ButtonPoetry",
     },
     {
         name: "Jigsaw",
@@ -240,6 +267,8 @@ export const media = [
             },
         ],
         tags: [tags.comedy, tags.dark],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=bO6_OBXNOwM&ab_channel=Netflix",
     },
     {
         name: "Hidden Figures",
@@ -262,6 +291,8 @@ export const media = [
             },
         ],
         tags: [tags.movie, tags.blhistory],
+        trailerUrl:
+            "https://www.youtube.com/watch?v=RK8xHq6dfAo&ab_channel=20thCenturyStudios",
     },
     // {
     //     name: "",

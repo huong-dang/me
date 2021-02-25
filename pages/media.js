@@ -9,9 +9,88 @@ import CardImage from "../components/CardImage";
 import { media, watchIcons, tags } from "../data/media";
 import { useState } from "react";
 import { useAppContext } from "../context/state";
+import ReactPlayer from "react-player";
+const Trailer = () => {
+    const { trailerUrl, showTrailer, updateShowTrailer } = useAppContext();
+    const [playing, setPlaying] = useState(false);
+
+    return (
+        <div id="trailer">
+            <style jsx>{`
+                #trailer {
+                    position: fixed;
+                    display: ${showTrailer ? "flex" : "none"};
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--light-pink);
+                    cursor: pointer; /* Add a pointer on hover */
+                    justify-content: center;
+                    align-items: center;
+                }
+                .x {
+                    border-radius: 50%;
+                    border-style: solid;
+                    height: 32px;
+                    width: 32px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-width: thin;
+                    border-style: solid;
+                }
+                .x-bar {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 5px;
+                }
+                .player-wrapper {
+                    position: relative;
+                    width: 50%;
+                    height: 70%;
+                }
+                @media only screen and (max-width: 768px) {
+                    .player-wrapper {
+                        width: 100%;
+                        height: 50%;
+                    }
+                }
+                .react-player {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            `}</style>
+            <div className="player-wrapper">
+                <div
+                    className="x-bar"
+                    onClick={() => {
+                        setPlaying(false);
+                        updateShowTrailer(false, "");
+                    }}
+                >
+                    <div className="x">X</div>
+                </div>
+                <ReactPlayer
+                    className="react-player"
+                    url={trailerUrl}
+                    playing={playing}
+                    onPlay={() => setPlaying(true)}
+                    onPause={() => setPlaying(false)}
+                    width="100%"
+                    height="100%"
+                />
+            </div>
+        </div>
+    );
+};
 export default function Media() {
     const [showFilter, setShowFilter] = useState(false);
     const [filter, setFilter] = useState([]);
+    const [selectedMedia, setSelectedMedia] = useState({});
     const filterOptions = Object.keys(tags);
 
     let mediaRecs = [...media];
@@ -38,12 +117,19 @@ export default function Media() {
 
         return (
             <Card key={idx}>
+                <style jsx>{`
+                    .movie-wraper {
+                        cursor: pointer;
+                    }
+                `}</style>
                 <CardHeader>{media.name}</CardHeader>
                 <CardBody>
                     <div
-                        onClick={() =>
-                            updateShowTrailer(true, media.trailerUrl)
-                        }
+                        onClick={() => {
+                            setSelectedMedia(media);
+                            updateShowTrailer(true, media.trailerUrl);
+                        }}
+                        className="movie-wrapper"
                     >
                         <CardImage
                             imgUrl={media.imgUrl}
@@ -205,6 +291,7 @@ export default function Media() {
             </div>
             <p>Showing {myMedia.length} items</p>
             <div className="container">{myMedia}</div>
+            <Trailer />
         </div>
     );
 }
