@@ -225,6 +225,12 @@ export default function Media() {
                     color: black;
                     margin-bottom: 10px;
                 }
+                @media only screen and (max-width: 768px) {
+                    .filter-bar {
+                        margin-left: 15px;
+                        margin-right: 15px;
+                    }
+                }
 
                 .filter-bar-text {
                     cursor: pointer;
