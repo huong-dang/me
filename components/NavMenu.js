@@ -4,7 +4,7 @@ import Head from "next/head";
 export const navOptions = {
     "/": "About.",
     "/media": "Media.",
-    "/books": "Books.",
+    // "/books": "Books.",
     // "/blog": "Blog.",
 };
 
