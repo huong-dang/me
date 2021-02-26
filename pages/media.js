@@ -5,11 +5,14 @@ import CardHeader from "../components/CardHeader";
 import Pill from "../components/Pill";
 import Card from "../components/Card";
 import CardBody from "../components/CardBody";
-import CardImage from "../components/CardImage";
 import { media, watchIcons, tags } from "../data/media";
 import { useState } from "react";
 import { useAppContext } from "../context/state";
 import ReactPlayer from "react-player";
+import Image from "next/image";
+
+const IMG_WIDTH = 230;
+const IMG_HEIGHT = 320;
 const Trailer = () => {
     const { trailerUrl, showTrailer, updateShowTrailer } = useAppContext();
     const [playing, setPlaying] = useState(false);
@@ -26,7 +29,7 @@ const Trailer = () => {
                     right: 0;
                     width: 100%;
                     height: 100%;
-                    background-color: var(--light-pink);
+                    background-color: var(--powder-blue);
                     cursor: pointer; /* Add a pointer on hover */
                     justify-content: center;
                     align-items: center;
@@ -34,22 +37,29 @@ const Trailer = () => {
                 .x {
                     border-radius: 50%;
                     border-style: solid;
+                    border-width: thin;
+                    color: var(electric-blue);
                     height: 32px;
                     width: 32px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-width: thin;
-                    border-style: solid;
+                    margin-bottom: 5px;
+                }
+                .x:hover {
+                    opacity: 0.5;
+                }
+                .x:active {
+                    color: white;
+                    background-color: var(--charcoal);
                 }
                 .x-bar {
                     display: flex;
                     justify-content: flex-end;
-                    margin: 5px;
                 }
                 .player-wrapper {
                     position: relative;
-                    width: 50%;
+                    width: 60%;
                     height: 70%;
                 }
                 @media only screen and (max-width: 768px) {
@@ -117,9 +127,13 @@ export default function Media() {
 
         return (
             <Card key={idx}>
-                <style jsx>{`
-                    .movie-wraper {
+                <style jsx global>{`
+                    .movie-wrapper {
                         cursor: pointer;
+                        border-radius: 12px;
+                    }
+                    .movie-wrapper:hover {
+                        opacity: 0.8;
                     }
                 `}</style>
                 <CardHeader>{media.name}</CardHeader>
@@ -129,12 +143,14 @@ export default function Media() {
                             setSelectedMedia(media);
                             updateShowTrailer(true, media.trailerUrl);
                         }}
-                        className="movie-wrapper"
                     >
-                        <CardImage
-                            imgUrl={media.imgUrl}
-                            altText={`${media.name} movie image`}
-                            clickUrl={media.url}
+                        <Image
+                            className="movie-wrapper"
+                            style={{ borderRadius: "12px" }}
+                            src={media.imgUrl}
+                            alt={`${media.name} poster image`}
+                            width={IMG_WIDTH}
+                            height={IMG_HEIGHT}
                         />
                     </div>
                     <div className="containerItem">{watch}</div>
@@ -270,11 +286,6 @@ export default function Media() {
                 onClick={() => setShowFilter(!showFilter)}
             >
                 <div className="filter-bar-text">
-                    {/* <span className="bar-box">
-                        <div className="bar">___</div>
-                        <div className="bar">__</div>
-                        <div className="bar">_</div>
-                    </span> */}
                     <span id="filter-name">filter</span>{" "}
                     <span id="filter-x">{showFilter ? "ʌ" : "v"}</span>
                 </div>
