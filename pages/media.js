@@ -47,11 +47,11 @@ const Trailer = () => {
                     margin-bottom: 5px;
                 }
                 .x:hover {
-                    opacity: 0.5;
-                }
-                .x:active {
                     color: white;
                     background-color: var(--charcoal);
+                }
+                .x:active {
+                    opacity: 0.5;
                 }
                 .x-bar {
                     display: flex;
