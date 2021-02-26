@@ -28,6 +28,7 @@ export default function Home() {
 
                 .boxItem {
                     width: 15%;
+                    overflow-wrap: break-all;
                 }
 
                 #works {
@@ -47,11 +48,8 @@ export default function Home() {
                     }
                 }
 
-                @media only screen and (max-width: 768px) {
-                    .boxItem {
-                        width: 100%;
-                    }
-
+                @media only screen and (max-width: 992px) {
+                    .boxItem,
                     #works {
                         width: 100%;
                     }
@@ -147,7 +145,7 @@ export default function Home() {
                     Read less
                 </div>
                 <div className="box">
-                    <div id="works" className="boxItem">
+                    <div id="works">
                         <h3>PROJECTS</h3>
                         <a
                             href="https://github.com/huong-dang/me"
