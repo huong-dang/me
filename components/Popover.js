@@ -16,8 +16,8 @@ export default function Popover({ children, showPopover, updateShowPopover }) {
                     background-color: var(--powder-blue);
                     border-radius: 12px;
                     padding: 12px;
-                    border-style: solid;
-                    border-width: thin;
+
+                    box-shadow: 0px 0px 5px 5px var(--charcoal);
                 }
                 @media only screen and (max-width: 600px) {
                     .popover-container {
@@ -30,6 +30,7 @@ export default function Popover({ children, showPopover, updateShowPopover }) {
                         border-radius: 0;
                         padding-left: 0;
                         padding-right: 0;
+                        border-style: none;
                     }
                 }
                 .x {
