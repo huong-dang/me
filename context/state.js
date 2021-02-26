@@ -1,10 +1,11 @@
-import { useState, createContext, useContext } from "react";
+import { useState, createContext, useContext, useEffect } from "react";
 
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
     const [showTrailer, setShowTrailer] = useState(false);
     const [trailerUrl, setTrailerUrl] = useState("");
+    const [showBookDetails, setShowBookDetails] = useState(false);
 
     const updateShowTrailer = (trailer, trailerUrl) => {
         setShowTrailer(trailer);
@@ -13,12 +14,18 @@ export function AppWrapper({ children }) {
             : setTrailerUrl("");
     };
 
+    const updateShowBookDetails = (bool) => {
+        setShowBookDetails(bool);
+    };
+
     return (
         <AppContext.Provider
             value={{
                 showTrailer,
                 trailerUrl,
                 updateShowTrailer,
+                updateShowBookDetails,
+                showBookDetails,
             }}
         >
             {children}
