@@ -15,7 +15,7 @@ export default function Popover({ children, showPopover, updateShowPopover }) {
                     cursor: pointer; /* Add a pointer on hover */
                     border-radius: 12px;
                     padding: 12px;
-                    box-shadow: 0px 0px 5px 5px var(--charcoal);
+                    box-shadow: 0px 0px 3px 1px black;
                     background-color: var(--off-white);
                 }
                 @media only screen and (max-width: 600px) {
