@@ -10,98 +10,27 @@ import { useState } from "react";
 import { useAppContext } from "../context/state";
 import ReactPlayer from "react-player";
 import Image from "next/image";
+import Popover from "../components/Popover";
 
 const IMG_WIDTH = 230;
 const IMG_HEIGHT = 320;
+
 const Trailer = () => {
     const { trailerUrl, showTrailer, updateShowTrailer } = useAppContext();
-    const [playing, setPlaying] = useState(false);
-
     return (
-        <div id="trailer">
-            <style jsx>{`
-                #trailer {
-                    position: fixed;
-                    display: ${showTrailer ? "flex" : "none"};
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: var(--powder-blue);
-                    cursor: pointer; /* Add a pointer on hover */
-                    justify-content: center;
-                    align-items: center;
-                }
-                .x {
-                    border-radius: 50%;
-                    border-style: solid;
-                    border-width: thin;
-                    color: var(electric-blue);
-                    height: 32px;
-                    width: 32px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-bottom: 5px;
-                }
-                .x:hover {
-                    color: white;
-                    background-color: var(--charcoal);
-                }
-                .x:active {
-                    opacity: 0.5;
-                }
-                .x-bar {
-                    display: flex;
-                    justify-content: flex-end;
-                }
-                .player-wrapper {
-                    position: relative;
-                    width: 60%;
-                    height: 70%;
-                }
-                @media only screen and (max-width: 768px) {
-                    .player-wrapper {
-                        width: 100%;
-                        height: 50%;
-                    }
-                }
-                .react-player {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-            `}</style>
-            <div className="player-wrapper">
-                <div
-                    className="x-bar"
-                    onClick={() => {
-                        setPlaying(false);
-                        updateShowTrailer(false, "");
-                    }}
-                >
-                    <div className="x">X</div>
-                </div>
-                <ReactPlayer
-                    className="react-player"
-                    url={trailerUrl}
-                    playing={playing}
-                    onPlay={() => setPlaying(true)}
-                    onPause={() => setPlaying(false)}
-                    width="100%"
-                    height="100%"
-                />
-            </div>
-        </div>
+        <Popover
+            showPopover={showTrailer}
+            updateShowPopover={updateShowTrailer}
+        >
+            <ReactPlayer url={trailerUrl} />
+        </Popover>
     );
 };
 export default function Media() {
     const [showFilter, setShowFilter] = useState(false);
     const [filter, setFilter] = useState([]);
     const [selectedMedia, setSelectedMedia] = useState({});
-    const filterOptions = Object.keys(tags);
+    const filterOptions = Object.keys(tags).sort();
 
     let mediaRecs = [...media];
     if (filter.length > 0) {
