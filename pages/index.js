@@ -136,8 +136,9 @@ export default function Home() {
                     overengineering. Tech should serve everyone, not just those
                     who have historical and continual advantages to be at the
                     table. I’m incredibly thankful that I get to wake up
-                    everyday and solve interesting problems, and I can’t wait to
-                    welcome more folks into this impactful and empowering field.
+                    everyday and solve interesting problems, and I'm always here
+                    to welcome more folks into this impactful and empowering
+                    field.
                 </p>
                 <div
                     id={`show-less${hideContent ? "-hide" : ""}`}
