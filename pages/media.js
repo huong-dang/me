@@ -22,7 +22,7 @@ const Trailer = () => {
             showPopover={showTrailer}
             updateShowPopover={updateShowTrailer}
         >
-            <ReactPlayer url={trailerUrl} />
+            <ReactPlayer url={trailerUrl} width="100%" height="100%" />
         </Popover>
     );
 };

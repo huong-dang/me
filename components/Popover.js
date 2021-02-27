@@ -12,11 +12,11 @@ export default function Popover({ children, showPopover, updateShowPopover }) {
                     right: 12.5%;
                     width: 75%;
                     height: 75%;
-                    cursor: pointer; /* Add a pointer on hover */
                     border-radius: 12px;
                     padding: 12px;
                     box-shadow: 0px 0px 3px 1px black;
                     background-color: var(--off-white);
+                    overflow: scroll;
                 }
                 @media only screen and (max-width: 600px) {
                     .popover-container {
@@ -45,6 +45,7 @@ export default function Popover({ children, showPopover, updateShowPopover }) {
                 .x:hover {
                     color: white;
                     background-color: var(--charcoal);
+                    cursor: pointer;
                 }
                 .x:active {
                     opacity: 0.5;
@@ -53,11 +54,10 @@ export default function Popover({ children, showPopover, updateShowPopover }) {
                     display: flex;
                     justify-content: flex-end;
                     padding: 5px;
+                    height: 40%;
                 }
                 .popover-children {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    height: 60vh;
                 }
             `}</style>
             <div>
