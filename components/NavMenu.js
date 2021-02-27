@@ -54,10 +54,35 @@ function NavMenu() {
                         margin-right: 120px;
                     }
                 }
+
+                .logo {
+                    height: 64px;
+                    width: 64px;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    border-radius: 50%;
+                    border-style: solid;
+                    border-width: thin;
+                    font-size: 32px;
+                    color: var(--electric-blue);
+                    box-shadow: 0px 0px 1px 2px var(--powder-blue);
+                }
+                a {
+                    text-decoration: none;
+                }
+                .logo-container {
+                    width: 78%;
+                }
             `}</style>
             <Head>
                 <title>Huong 🌻</title>
             </Head>
+            <div className="logo-container">
+                <a href="/">
+                    <div className="logo">hd.</div>
+                </a>
+            </div>
             {options.map((pagePath, idx) => {
                 return (
                     <div key={idx}>

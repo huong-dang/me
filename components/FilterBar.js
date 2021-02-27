@@ -1,8 +1,58 @@
+import { useState } from "react";
+// const tagsDropdown = filterOptions.map((t, idx) => {
+//     return (
+//         <div
+//             className={`search-text${showFilter ? "" : " search-hide"}`}
+//             key={idx}
+//             onClick={() => {
+//                 if (!filter.includes(t)) {
+//                     setFilter([...filter, t]);
+//                 }
+//             }}
+//         >
+//             <style jsx>{`
+//                 .search-text {
+//                     transition: background-color 0.5s ease;
+//                     border-radius: 12px;
+//                     height: 25px;
+//                     padding-left: 10px;
+//                     display: flex;
+//                     align-items: center;
+//                 }
+//                 .search-text:hover {
+//                     background-color: var(--powder-blue);
+//                     cursor: pointer;
+//                 }
+//                 .search-text:active {
+//                     background-color: var(--electric-blue);
+//                     color: white;
+//                 }
+//                 .search-hide {
+//                     display: none;
+//                 }
+//             `}</style>
+//             {tags[t]}
+//         </div>
+//     );
+// });
+
 export default FilterBar = ({
     filterOptions,
+    filterOptionsDictionary,
     selectedFilters,
     updateSelectedFilters,
 }) => {
+    const [showFilter, setShowFilter] = useState(false);
+
+    const handleShowFilterOptions = () => {
+        setShowFilter(!showFilter);
+    };
+
+    const handleSelectFilter = (e) => {
+        console.log(e.target.value);
+        // setFilter([...filter].filter((v) => v != f));
+        // updateSelectedFilters
+    };
     return (
         <div>
             <style jsx>{`
@@ -79,25 +129,23 @@ export default FilterBar = ({
             `}</style>
             <div
                 className="general-container filter-bar"
-                onClick={() => setShowFilter(!showFilter)}
+                onClick={handleShowFilterOptions}
             >
                 <div className="filter-bar-text">
                     <span id="filter-name">filter</span>{" "}
                     <span id="filter-x">{showFilter ? "ʌ" : "v"}</span>
                 </div>
-                {tagsDropdown}
+                {filterOptions}
             </div>
             <div className="selected-filters">
-                {filter.map((f, idx) => {
+                {selectedFilters.map((f, idx) => {
                     return (
                         <div
                             className="pill"
                             key={idx}
-                            onClick={() => {
-                                setFilter([...filter].filter((v) => v != f));
-                            }}
+                            onClick={handleSelectFilter}
                         >
-                            {`${tags[f]} x`}
+                            {`${filterOptionsDictionary[f]} x`}
                         </div>
                     );
                 })}
