@@ -22,8 +22,8 @@ function NavMenu() {
                     font-size: 20px;
                     box-shadow: 5px 5px 0 var(--charcoal);
                     cursor: pointer;
-                    margin-left: 1vh;
                     padding: 1vh;
+                    margin-left: 1vh;
                     transition: background-color 0.5s ease;
                 }
 
@@ -39,20 +39,10 @@ function NavMenu() {
                 }
                 .menu-container {
                     display: flex;
-                    margin: 12px;
                     justify-content: flex-end;
-                }
-
-                @media only screen and (max-width: 600px) {
-                    .button {
-                        font-size: 16px;
-                    }
-                }
-
-                @media only screen and (min-width: 768px) {
-                    .menu-container {
-                        margin-right: 120px;
-                    }
+                    margin-top: 12px;
+                    margin-left: 120px;
+                    margin-right: 120px;
                 }
 
                 .logo {
@@ -62,17 +52,41 @@ function NavMenu() {
                     align-items: center;
                     display: flex;
                     border-radius: 50%;
-                    border-style: solid;
                     border-width: thin;
                     font-size: 32px;
                     color: var(--electric-blue);
-                    box-shadow: 0px 0px 1px 2px var(--powder-blue);
+                    box-shadow: 0px 0px 5px 2px var(--powder-blue);
+                }
+                @media only screen and (max-width: 600px) {
+                    .button {
+                        font-size: 16px;
+                    }
+                    .menu-container {
+                        margin-left: 15px;
+                        margin-right: 15px;
+                    }
+                    .logo {
+                        font-size: 28px;
+                        height: 52px;
+                        width: 52px;
+                    }
                 }
                 a {
                     text-decoration: none;
                 }
                 .logo-container {
-                    width: 78%;
+                    width: 20%;
+                }
+                .nav-options {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .options-container {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    width: 80%;
                 }
             `}</style>
             <Head>
@@ -83,15 +97,19 @@ function NavMenu() {
                     <div className="logo">hd.</div>
                 </a>
             </div>
-            {options.map((pagePath, idx) => {
-                return (
-                    <div key={idx}>
-                        <Link href={pagePath}>
-                            <div className="button">{navOptions[pagePath]}</div>
-                        </Link>
-                    </div>
-                );
-            })}
+            <div className="options-container">
+                {options.map((pagePath, idx) => {
+                    return (
+                        <div key={idx} className="nav-options">
+                            <Link href={pagePath}>
+                                <div className="button">
+                                    {navOptions[pagePath]}
+                                </div>
+                            </Link>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }
