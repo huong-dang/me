@@ -124,7 +124,7 @@ export default function Home() {
                 </div>
                 <p id={hideContent ? "more-hide" : ""}>
                     I love cultivating and being a part of a positive community
-                    of engineers that share my priorities, namedly: increasing
+                    of engineers that share my priorities, namely: increasing
                     the representation of{" "}
                     <a href="https://www.thebipocproject.org/" target="_blank">
                         BIPOC
