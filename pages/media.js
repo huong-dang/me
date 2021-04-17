@@ -5,16 +5,13 @@ import CardHeader from "../components/CardHeader";
 import Pill from "../components/Pill";
 import Card from "../components/Card";
 import CardBody from "../components/CardBody";
+import CardBodyImage from "../components/CardBodyImage";
 import { media, watchIcons, tags } from "../data/media";
 import { useState } from "react";
 import { useAppContext } from "../context/state";
 import ReactPlayer from "react-player";
-import Image from "next/image";
 import Popover from "../components/Popover";
 import FilterBar from "../components/FilterBar";
-
-const IMG_WIDTH = 230;
-const IMG_HEIGHT = 320;
 
 const Trailer = () => {
     const { trailerUrl, showTrailer, updateShowTrailer } = useAppContext();
@@ -70,13 +67,9 @@ export default function Media() {
                             updateShowTrailer(true, media.trailerUrl);
                         }}
                     >
-                        <Image
-                            className="movie-wrapper"
-                            style={{ borderRadius: "12px" }}
-                            src={media.imgUrl}
-                            alt={`${media.name} poster image`}
-                            width={IMG_WIDTH}
-                            height={IMG_HEIGHT}
+                        <CardBodyImage
+                            imageSource={media.imgUrl}
+                            alternativeText={`${media.name} poster image`}
                         />
                     </div>
                     <div className="containerItem">{watch}</div>
@@ -84,15 +77,6 @@ export default function Media() {
                         return <Pill text={tag} key={idx} />;
                     })}
                 </CardBody>
-                <style jsx global>{`
-                    .movie-wrapper {
-                        cursor: pointer;
-                        border-radius: 12px;
-                    }
-                    .movie-wrapper:hover {
-                        opacity: 0.8;
-                    }
-                `}</style>
             </Card>
         );
     });
