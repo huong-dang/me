@@ -10,6 +10,8 @@ export default function CardHeader({ children }) {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    padding-left: 5px;
+                    padding-right: 5px;
                 }
             `}</style>
             <b>{children}</b>

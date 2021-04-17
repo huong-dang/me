@@ -1,10 +1,5 @@
 import { useState } from "react";
 
-/**
- *
- * @param {*} param0
- * @returns
- */
 function FilterBar({ filterOptions, callback, filterDictionary }) {
     const [showFilterOptions, setShowFilterOptions] = useState(false);
     const [selectedFilters, setSelectedFilters] = useState([]);
