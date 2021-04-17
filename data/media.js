@@ -49,7 +49,7 @@ export const media = [
                 srcName: "youtube",
             },
         ],
-        imgUrl: "/gonegirl.jpg",
+        imgUrl: "/media/gonegirl.jpg",
         tags: [tags.movie, tags.thriller, tags.dark],
         trailerUrl: "https://youtu.be/u_17_kRZNFU",
     },
@@ -63,7 +63,7 @@ export const media = [
                 srcName: "youtube",
             },
         ],
-        imgUrl: "/promising.jpg",
+        imgUrl: "/media/promising.jpg",
         imgWidth: 220,
         imgHeight: 326,
         tags: [tags.movie, tags.thriller, tags.dark],
@@ -73,7 +73,7 @@ export const media = [
     {
         name: "The Handmaiden",
         url: "https://en.wikipedia.org/wiki/The_Handmaiden",
-        imgUrl: "/handmaiden.png",
+        imgUrl: "/media/handmaiden.png",
         watch: [
             {
                 src:
@@ -88,7 +88,7 @@ export const media = [
     {
         name: "God's Own Country",
         url: "https://en.wikipedia.org/wiki/God%27s_Own_Country_(2017_film)",
-        imgUrl: "/godowncountry.png",
+        imgUrl: "/media/godowncountry.png",
         watch: [
             {
                 src:
@@ -107,7 +107,7 @@ export const media = [
     {
         name: "The Hate U Give",
         url: "https://en.wikipedia.org/wiki/The_Hate_U_Give_(film)",
-        imgUrl: "/thehateugive.png",
+        imgUrl: "/media/thehateugive.png",
         watch: [
             {
                 src:
@@ -126,7 +126,7 @@ export const media = [
     {
         name: "Dear White People",
         url: "https://en.wikipedia.org/wiki/Dear_White_People_(TV_series)",
-        imgUrl: "/dearwhitepeople.jpeg",
+        imgUrl: "/media/dearwhitepeople.jpeg",
         watch: [
             {
                 src: "https://www.netflix.com/watch/80095698?source=35",
@@ -140,7 +140,7 @@ export const media = [
     {
         name: "Train to Busan",
         url: "https://en.wikipedia.org/wiki/Train_to_Busan",
-        imgUrl: "/trantobusan.jpg",
+        imgUrl: "/media/traintobusan.jpg",
         watch: [
             {
                 src: "http://www.youtube.com/watch?v=-4TqmSVavZk",
@@ -158,7 +158,7 @@ export const media = [
     {
         name: "New Girl",
         url: "https://en.wikipedia.org/wiki/New_Girl",
-        imgUrl: "/newgirl.jpeg",
+        imgUrl: "/media/newgirl.jpeg",
         watch: [
             {
                 src: "https://www.netflix.com/watch/70196145?source=35",
@@ -172,7 +172,7 @@ export const media = [
     {
         name: "Captain America: Civil War",
         url: "https://en.wikipedia.org/wiki/Captain_America:_Civil_War",
-        imgUrl: "/civilwar.jpg",
+        imgUrl: "/media/civilwar.jpg",
         watch: [
             {
                 src:
@@ -187,7 +187,7 @@ export const media = [
     {
         name: "The Half of It",
         url: "https://en.wikipedia.org/wiki/The_Half_of_It",
-        imgUrl: "/thehalfofit.jpeg",
+        imgUrl: "/media/thehalfofit.jpeg",
         watch: [
             {
                 src: "https://www.netflix.com/watch/81005150?source=35",
@@ -201,7 +201,7 @@ export const media = [
     {
         name: "Dear Ex",
         url: "https://en.wikipedia.org/wiki/Dear_Ex",
-        imgUrl: "/dearex.jpg",
+        imgUrl: "/media/dearex.jpg",
         watch: [
             {
                 src: "https://www.netflix.com/watch/81045891?source=35",
@@ -215,7 +215,7 @@ export const media = [
     {
         name: "Homecoming King",
         url: "https://en.wikipedia.org/wiki/Hasan_Minhaj:_Homecoming_King",
-        imgUrl: "/homecomingking.jpeg",
+        imgUrl: "/media/homecomingking.jpeg",
         watch: [
             {
                 src: "https://www.netflix.com/watch/80134781?source=35",
@@ -229,7 +229,7 @@ export const media = [
     {
         name: "Quarter-Life Crisis",
         url: "https://www.netflix.com/title/81157965",
-        imgUrl: "/taylor.jpg",
+        imgUrl: "/media/taylor.jpg",
         watch: [
             {
                 src: "https://www.netflix.com/watch/81157965?source=35",
@@ -244,7 +244,7 @@ export const media = [
         name: "What Kind of Asian Are You?",
         url:
             "https://www.youtube.com/watch?v=VoP0ox_Jw_w&ab_channel=ButtonPoetry",
-        imgUrl: "/alex.jpg",
+        imgUrl: "/media/alex.jpg",
         watch: [
             {
                 src:
@@ -259,7 +259,7 @@ export const media = [
     {
         name: "Jigsaw",
         url: "https://www.netflix.com/title/80223685",
-        imgUrl: "/daniel.jpg",
+        imgUrl: "/media/daniel.jpg",
         watch: [
             {
                 src: "https://www.netflix.com/title/80223685",
@@ -273,7 +273,7 @@ export const media = [
     {
         name: "Hidden Figures",
         url: "https://en.wikipedia.org/wiki/Hidden_Figures",
-        imgUrl: "/hiddenfigures.jpg",
+        imgUrl: "/media/hiddenfigures.jpg",
         watch: [
             {
                 src:

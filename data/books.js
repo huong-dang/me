@@ -18,15 +18,14 @@ export const books = [
         name: "Girl in Translation",
         author: "Jean Kwok",
         url: "https://www.jeankwok.com/girl-in-translation",
-        imgUrl: "https://images3.penguinrandomhouse.com/cover/9781594485152",
+        imgUrl: "/books/girlInTranslation.jpeg",
         tags: [tags.fiction],
     },
     {
         name: "So You Want to Talk About Race",
         author: "Ijeoma Oluo",
         url: "https://en.wikipedia.org/wiki/So_You_Want_to_Talk_About_Race",
-        imgUrl:
-            "https://prodimage.images-bn.com/pimages/9781580058827_p0_v9_s600x595.jpg",
+        imgUrl: "/books/soYouWantToTalkAboutRace.jpeg",
         tags: [tags.nonfiction],
     },
 ];
