@@ -12,6 +12,7 @@ import { useAppContext } from "../context/state";
 import ReactPlayer from "react-player";
 import Popover from "../components/Popover";
 import FilterBar from "../components/FilterBar";
+import TotalText from "../components/TotalText";
 
 const Trailer = () => {
     const { trailerUrl, showTrailer, updateShowTrailer } = useAppContext();
@@ -90,16 +91,9 @@ export default function Media() {
                 filterOptions={filterOptions}
                 filterDictionary={tags}
             />
-            <p>Showing {myMedia.length} items</p>
+            <TotalText total={myMedia.length} />
             <div className="container">{myMedia}</div>
             <Trailer />
-            <style jsx>{`
-                p {
-                    text-align: center;
-                    color: black;
-                    font-size: 12px;
-                }
-            `}</style>
         </div>
     );
 }

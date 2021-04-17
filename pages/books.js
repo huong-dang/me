@@ -7,6 +7,8 @@ import CardHeader from "../components/CardHeader";
 import Card from "../components/Card";
 import CardBody from "../components/CardBody";
 import CardBodyImage from "../components/CardBodyImage";
+import TotalText from "../components/TotalText";
+import Pill from "../components/Pill";
 
 function Books() {
     const [filters, setFilters] = useState([]);
@@ -26,10 +28,15 @@ function Books() {
             <Card>
                 <CardHeader>{book.name}</CardHeader>
                 <CardBody>
-                    <CardBodyImage
-                        imageSource={book.imgUrl}
-                        alternativeText={`${book.name} poster image`}
-                    />
+                    <a href={book.url} target="_blank">
+                        <CardBodyImage
+                            imageSource={book.imgUrl}
+                            alternativeText={`${book.name} poster image`}
+                        />
+                    </a>
+                    {book.tags.map((tag, idx) => {
+                        return <Pill text={tag} key={idx} />;
+                    })}
                 </CardBody>
             </Card>
         );
@@ -44,15 +51,8 @@ function Books() {
                 callback={filtersCallback}
                 filterDictionary={tags}
             />
-            <p>Showing {myBooks.length} items</p>
+            <TotalText total={myBooks.length} />
             <div className="container">{myBooks}</div>
-            <style jsx>{`
-                p {
-                    text-align: center;
-                    color: black;
-                    font-size: 12px;
-                }
-            `}</style>
         </div>
     );
 }

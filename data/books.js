@@ -1,17 +1,17 @@
-export const readIcons = {
-    kobo: {
-        imgUrl:
-            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyVpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0wMTowNjo1NyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTM5ODYyRjYyQzcwMTFFQTlDNzJDREU4QzcxRkZFRjQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzExQzBBRTQyQzcwMTFFQTlDNzJDREU4QzcxRkZFRjQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMzk4NjJGNDJDNzAxMUVBOUM3MkNERThDNzFGRkVGNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMzk4NjJGNTJDNzAxMUVBOUM3MkNERThDNzFGRkVGNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuTmXZkAAAdlSURBVHjaxJgJ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",
-    },
-    apple: {
-        imgUrl:
-            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAACtklEQVR4AczYAwwlSRRA0V7btm3btm3GySpY27atsW3btm0GozPpjFX1/f9N2v363XbVS5DPcBwewFv4FTVXDH7HO3gYJ+WTI5egE6wQ6idzBuNDnF5MwXNQX/60wMWFFNwKnys8P2KXfAVPxHDFYzLOy1XwWqXj3mwFr1Z67sxU8HDl44yY4BaYoHzMww4hwW+Vn+qbEjxO5XDhxgTbqBwGri94COIsXsykSQwdSo8etGtHy5Y0aUKDBtStS5061K9P48YrtqX7pPumMWlseozMOHVtwbeF6NCBq69m333ZYos0LLchjU2PcdllVK0qwo9rC46yKYYOJUmKM7RoIcBsbJbgCCFeeaV4gnfdJcK5CR4S4sEHiyd46qkiPJvgPSGuuCKe6Prreeml7AX331+ELxP8IcSZZ8YTPfww0KcP996bueCOOzJ/vgD/JKglxLHHxhPdcIN1aNuWa65hhx3CcZtvzpQpAtSKCx51VFzwpptslBdeiMdOnBgV/DPvK3jjjdahc2fuu4+dd45/F6dOFeDfBB8IccYZccH0TYexY3nggcyfwZ12ij2DXyd4TIjLL48nuvZaXn+dLbcs9Fv8QoJjhHjggXJ+By9KkA7jbYro9y2P4Y47BJiPLVYI8pFNMXBg8QQbNRLgz7UbC0cL0a4d55zD9tvnL7XFFhx3HL//LsK56zdYu4sxcyaDB9O9+4qPcfPmK65C3brUqkX16iuGmjVXrGvYkGbNaN2aLl0YMGBFmzDO6I21qE9TOVy1qU7TX8pPk1CvbjvMVj6WYI9Yx/1U5ePyTEsfdys9T8VLH+WTfDrX8tv5mKZ4LMR1+RYw98CfCk8NHFTIEvB16Ch/euG2YhbRz8d3WVbBpuBXXF64Inp82BwXYPlygbgXmgzWQrsQi6Dj2gVAbA/ErOTaAwBDm9ddnj7AhQAAAABJRU5ErkJggg==",
-    },
-};
 export const tags = {
     fiction: "fiction",
     nonfiction: "nonfiction",
     lgbtq: "lgbtq+",
+    blhistory: "black history",
+    immigrant: "immigrant experience",
+    ya: "young adult",
+    fantasy: "fantasy",
+    romance: "romance",
+    feminism: "feminism",
+    dark: "dark",
+    lighthearted: "lighthearted",
+    distopian: "distopian",
+    disability: "disability",
 };
 export const books = [
     {
@@ -19,13 +19,161 @@ export const books = [
         author: "Jean Kwok",
         url: "https://www.jeankwok.com/girl-in-translation",
         imgUrl: "/books/girlInTranslation.jpeg",
-        tags: [tags.fiction],
+        tags: [tags.fiction, tags.immigrant, tags.ya],
     },
     {
         name: "So You Want to Talk About Race",
         author: "Ijeoma Oluo",
-        url: "https://en.wikipedia.org/wiki/So_You_Want_to_Talk_About_Race",
+        url:
+            "https://www.sealpress.com/titles/ijeoma-oluo/so-you-want-to-talk-about-race/9781580056779/",
         imgUrl: "/books/soYouWantToTalkAboutRace.jpeg",
+        tags: [tags.nonfiction, tags.blhistory],
+    },
+    {
+        name: "To Kill a Mockingbird",
+        author: "Harper Lee",
+        url: "https://www.tokillamockingbird.com/",
+        imgUrl: "/books/tokillamockingbird.jpeg",
+        tags: [tags.fiction],
+    },
+    {
+        name: "Like a Love Story",
+        author: "Abdi Nazemian",
+        url:
+            "https://www.harpercollins.com/products/like-a-love-story-abdi-nazemian?variant=32116410744866",
+        imgUrl: "/books/likealovestory.jpeg",
+        tags: [tags.fiction, tags.ya, tags.lgbtq, tags.immigrant],
+    },
+    {
+        name: "The Farm",
+        author: "Joanne Ramos",
+        url:
+            "https://www.penguinrandomhouse.com/books/600468/the-farm-by-joanne-ramos/",
+        imgUrl: "/books/thefarm.jpeg",
+        tags: [tags.fiction, tags.feminism, tags.immigrant, tags.distopian],
+    },
+    {
+        name: "Bad Feminist",
+        author: "Roxane Gay",
+        url:
+            "https://www.harpercollins.com/products/bad-feminist-roxane-gay?variant=32129332510754",
+        imgUrl: "/books/badfeminist.jpeg",
+        tags: [tags.nonfiction, tags.feminism, tags.blhistory],
+    },
+    {
+        name: "The Handmaid's Tale",
+        author: "Margaret Atwood",
+        url:
+            "https://www.penguinrandomhouse.com/books/6125/the-handmaids-tale-by-margaret-atwood-introduction-by-valerie-martin/",
+        imgUrl: "/books/handmaid.jpeg",
+        tags: [tags.fiction, tags.feminism, tags.distopian],
+    },
+    {
+        name: "The Pillars of the Earth",
+        author: "Ken Follett",
+        url:
+            "https://www.penguinrandomhouse.com/books/290347/the-pillars-of-the-earth-by-ken-follett/",
+        imgUrl: "/books/pillars.jpeg",
+        tags: [tags.fiction, tags.fantasy],
+    },
+    {
+        name: "The Giver",
+        author: "Lois Lowry",
+        url: "https://en.wikipedia.org/wiki/The_Giver",
+        imgUrl: "/books/thegiver.jpeg",
+        tags: [tags.fiction, tags.distopian],
+    },
+    {
+        name: "Out of My Mind",
+        author: "Sharon M. Draper",
+        url:
+            "https://www.simonandschuster.com/books/Out-of-My-Mind/Sharon-M-Draper/9781416971719",
+        imgUrl: "/books/outofmymind.jpeg",
+        tags: [tags.fiction, tags.ya, tags.disability],
+    },
+    {
+        name: "Poison Study",
+        author: "Maria V. Snyder",
+        url:
+            "https://www.harlequintradepublishing.com/shop/books/9780369700575_poison-study.html",
+        imgUrl: "/books/poisonstudy.jpeg",
+        tags: [tags.fiction, tags.fantasy],
+    },
+    {
+        name: "Shine",
+        author: "Jessica Jung",
+        url: "https://rivetedlit.com/p/shine-book/",
+        imgUrl: "/books/shine.jpeg",
+        tags: [tags.fiction, tags.immigrant, tags.ya, tags.lighthearted],
+    },
+    {
+        name: "Ayesha at Last",
+        author: "Uzma Jalaluddin",
+        url:
+            "https://www.penguinrandomhouse.com/books/599656/ayesha-at-last-by-uzma-jalaluddin/",
+        imgUrl: "/books/ayesha.jpeg",
+        tags: [tags.fiction, tags.immigrant, tags.romance],
+    },
+    {
+        name: "The Kiss Quotient",
+        author: "Helen Hoang",
+        url:
+            "https://www.penguinrandomhouse.com/books/566902/the-kiss-quotient-by-helen-hoang/",
+        imgUrl: "/books/kissquotient.jpeg",
+        tags: [tags.fiction, tags.romance, tags.lighthearted],
+    },
+    {
+        name: "Me Before You",
+        author: "Jojo Moyes",
+        url:
+            "https://www.penguinrandomhouse.com/books/312485/me-before-you-movie-tie-in-by-jojo-moyes/",
+        imgUrl: "/books/mebeforeyou.jpeg",
+        tags: [tags.fiction, tags.romance, tags.disability],
+    },
+    {
+        name: "Fangirl",
+        author: "Rainbow Rowell",
+        url: "https://us.macmillan.com/books/9781250073808",
+        imgUrl: "/books/fangirl.jpeg",
+        tags: [tags.fiction, tags.romance],
+    },
+    {
+        name: "Their Eyes Were Watching God",
+        author: "Zora Neale Hurston",
+        url:
+            "https://www.zoranealehurston.com/books/their-eyes-were-watching-god/",
+        imgUrl: "/books/theireyeswerewatchinggod.jpeg",
+        tags: [tags.fiction, tags.feminism, tags.blhistory],
+    },
+    {
+        name: "Battle Hymn of the Tiger Mother",
+        author: "Amy Chua",
+        url:
+            "https://www.penguinrandomhouse.com/books/308361/battle-hymn-of-the-tiger-mother-by-amy-chua/",
+        imgUrl: "/books/battlehym.jpeg",
+        tags: [tags.nonfiction, tags.immigrant],
+    },
+    {
+        name: "Wild Swans",
+        author: "Jung Chang",
+        url:
+            "https://www.simonandschuster.com/books/Wild-Swans/Jung-Chang/9780743246989",
+        imgUrl: "/books/wildswans.jpeg",
+        tags: [tags.nonfiction, tags.immigrant],
+    },
+    {
+        name: "Between Two Worlds",
+        author: "Zainab Salbi",
+        url:
+            "https://www.penguinrandomhouse.com/books/296745/between-two-worlds-by-zainab-salbi/",
+        imgUrl: "/books/betweentwoworlds.jpeg",
         tags: [tags.nonfiction],
     },
+    // {
+    //     name: "",
+    //     author: "",
+    //     url: "",
+    //     imgUrl: "",
+    //     tags: [],
+    // },
 ];

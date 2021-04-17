@@ -32,6 +32,7 @@ export const tags = {
     blhistory: "black history",
     action: "action",
     poetry: "poetry",
+    immigrant: "immigrant experience",
 };
 export const media = [
     {
@@ -222,7 +223,7 @@ export const media = [
                 srcName: "netflix",
             },
         ],
-        tags: [tags.comedy],
+        tags: [tags.comedy, tags.immigrant],
         trailerUrl:
             "https://www.youtube.com/watch?v=Fu-u5VldxVY&ab_channel=Netflix",
     },
@@ -252,7 +253,7 @@ export const media = [
                 srcName: "youtube",
             },
         ],
-        tags: [tags.poetry],
+        tags: [tags.poetry, tags.immigrant],
         trailerUrl:
             "https://www.youtube.com/watch?v=VoP0ox_Jw_w&ab_channel=ButtonPoetry",
     },
@@ -309,7 +310,7 @@ export const media = [
                 srcName: "youtube",
             },
         ],
-        tags: [tags.tv, tags.comedy],
+        tags: [tags.tv, tags.comedy, tags.lgbtq, tags.immigrant],
         trailerUrl: "https://www.youtube.com/watch?v=NgZXnTZbF3g",
     },
     // {
