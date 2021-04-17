@@ -25,7 +25,7 @@ function Books() {
     }
     const myBooks = bookRecs.map((book, idx) => {
         return (
-            <Card>
+            <Card key={idx}>
                 <CardHeader>{book.name}</CardHeader>
                 <CardBody>
                     <a href={book.url} target="_blank">

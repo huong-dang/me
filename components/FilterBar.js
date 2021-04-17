@@ -68,9 +68,15 @@ function FilterBar({ filterOptions, callback, filterDictionary }) {
             >
                 <div className="filter-bar-text">
                     <span id="filter-name">filter</span>{" "}
-                    <span id="filter-x">{showFilterOptions ? "ʌ" : "v"}</span>
+                    <span id="filter-x">{showFilterOptions ? "" : "v"}</span>
                 </div>
-                {filtersDropdownOptions}
+                <div
+                    className={`filter-dropdown${
+                        showFilterOptions ? "" : "-hide"
+                    }`}
+                >
+                    {filtersDropdownOptions}
+                </div>
             </div>
             <div className="selected-filters">
                 {selectedFilters.map((f, idx) => {
@@ -86,6 +92,13 @@ function FilterBar({ filterOptions, callback, filterDictionary }) {
                 })}
             </div>
             <style jsx>{`
+                .filter-dropdown {
+                    overflow-y: scroll;
+                    height: 200px;
+                }
+                .filter-dropdown-hide {
+                    display: none;
+                }
                 .pill {
                     border-style: solid;
                     border-radius: 20px;
@@ -154,6 +167,16 @@ function FilterBar({ filterOptions, callback, filterDictionary }) {
                 .bar-box {
                     margin-bottom: 27px;
                     margin-right: 5px;
+                }
+                ::-webkit-scrollbar {
+                    -webkit-appearance: none;
+                    width: 5px;
+                }
+
+                ::-webkit-scrollbar-thumb {
+                    border-radius: 4px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
                 }
             `}</style>
         </div>

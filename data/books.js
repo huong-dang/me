@@ -50,7 +50,13 @@ export const books = [
         url:
             "https://www.penguinrandomhouse.com/books/600468/the-farm-by-joanne-ramos/",
         imgUrl: "/books/thefarm.jpeg",
-        tags: [tags.fiction, tags.feminism, tags.immigrant, tags.distopian],
+        tags: [
+            tags.fiction,
+            tags.feminism,
+            tags.immigrant,
+            tags.distopian,
+            tags.dark,
+        ],
     },
     {
         name: "Bad Feminist",
@@ -66,7 +72,7 @@ export const books = [
         url:
             "https://www.penguinrandomhouse.com/books/6125/the-handmaids-tale-by-margaret-atwood-introduction-by-valerie-martin/",
         imgUrl: "/books/handmaid.jpeg",
-        tags: [tags.fiction, tags.feminism, tags.distopian],
+        tags: [tags.fiction, tags.feminism, tags.distopian, tags.dark],
     },
     {
         name: "The Pillars of the Earth",
@@ -74,7 +80,7 @@ export const books = [
         url:
             "https://www.penguinrandomhouse.com/books/290347/the-pillars-of-the-earth-by-ken-follett/",
         imgUrl: "/books/pillars.jpeg",
-        tags: [tags.fiction, tags.fantasy],
+        tags: [tags.fiction, tags.fantasy, tags.dark],
     },
     {
         name: "The Giver",
