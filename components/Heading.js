@@ -1,7 +1,7 @@
-export default function Heading({ text, special = false }) {
+export default function Heading({ children, special = false }) {
     return (
         <h1 className={`heading${special ? "-special" : ""}`}>
-            {text}
+            {children}
             <style jsx>{`
                 .heading {
                     color: var(--electric-blue);
@@ -36,7 +36,6 @@ export default function Heading({ text, special = false }) {
                 }
 
                 /* cursor animations */
-
                 @keyframes animated-cursor {
                     from {
                         border-right-color: var(--powder-blue);

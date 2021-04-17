@@ -7,10 +7,11 @@ import Card from "../components/Card";
 import CardBody from "../components/CardBody";
 import { media, watchIcons, tags } from "../data/media";
 import { useState } from "react";
-import { useAppContext } from "../context/state";
+import { useAppContext } from "../context/mediaState";
 import ReactPlayer from "react-player";
 import Image from "next/image";
 import Popover from "../components/Popover";
+import { AppWrapper } from "../context/mediaState";
 
 const IMG_WIDTH = 230;
 const IMG_HEIGHT = 320;
