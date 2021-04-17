@@ -1,60 +1,95 @@
 import { useState } from "react";
-// const tagsDropdown = filterOptions.map((t, idx) => {
-//     return (
-//         <div
-//             className={`search-text${showFilter ? "" : " search-hide"}`}
-//             key={idx}
-//             onClick={() => {
-//                 if (!filter.includes(t)) {
-//                     setFilter([...filter, t]);
-//                 }
-//             }}
-//         >
-//             <style jsx>{`
-//                 .search-text {
-//                     transition: background-color 0.5s ease;
-//                     border-radius: 12px;
-//                     height: 25px;
-//                     padding-left: 10px;
-//                     display: flex;
-//                     align-items: center;
-//                 }
-//                 .search-text:hover {
-//                     background-color: var(--powder-blue);
-//                     cursor: pointer;
-//                 }
-//                 .search-text:active {
-//                     background-color: var(--electric-blue);
-//                     color: white;
-//                 }
-//                 .search-hide {
-//                     display: none;
-//                 }
-//             `}</style>
-//             {tags[t]}
-//         </div>
-//     );
-// });
 
-export default FilterBar = ({
-    filterOptions,
-    filterOptionsDictionary,
-    selectedFilters,
-    updateSelectedFilters,
-}) => {
-    const [showFilter, setShowFilter] = useState(false);
+/**
+ *
+ * @param {*} param0
+ * @returns
+ */
+function FilterBar({ filterOptions, callback, filterDictionary }) {
+    const [showFilterOptions, setShowFilterOptions] = useState(false);
+    const [selectedFilters, setSelectedFilters] = useState([]);
 
-    const handleShowFilterOptions = () => {
-        setShowFilter(!showFilter);
+    // Add the selected filter to view
+    const handleOnClickFilter = (f) => {
+        return () => {
+            if (!selectedFilters.includes(f)) {
+                const updatedFilters = [...selectedFilters, f];
+                setSelectedFilters(updatedFilters);
+                callback(updatedFilters);
+            }
+        };
     };
 
-    const handleSelectFilter = (e) => {
-        console.log(e.target.value);
-        // setFilter([...filter].filter((v) => v != f));
-        // updateSelectedFilters
+    // Remove the selected filter from view
+    const handleRemoveFilter = (f) => {
+        return () => {
+            const updatedFilters = [...selectedFilters].filter((v) => v != f);
+            setSelectedFilters(updatedFilters);
+            callback(updatedFilters);
+        };
     };
+
+    // Show the tag options for the user to choose from
+    const filtersDropdownOptions = filterOptions.map((t, idx) => {
+        return (
+            <div
+                className={`search-text${
+                    showFilterOptions ? "" : " search-hide"
+                }`}
+                key={idx}
+                onClick={handleOnClickFilter(t)}
+            >
+                {filterDictionary[t]}
+                <style jsx>{`
+                    .search-text {
+                        transition: background-color 0.5s ease;
+                        border-radius: 12px;
+                        height: 25px;
+                        padding-left: 10px;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .search-text:hover {
+                        background-color: var(--powder-blue);
+                        cursor: pointer;
+                    }
+                    .search-text:active {
+                        background-color: var(--electric-blue);
+                        color: white;
+                    }
+                    .search-hide {
+                        display: none;
+                    }
+                `}</style>
+            </div>
+        );
+    });
+
     return (
         <div>
+            <div
+                className="general-container filter-bar"
+                onClick={() => setShowFilterOptions(!showFilterOptions)}
+            >
+                <div className="filter-bar-text">
+                    <span id="filter-name">filter</span>{" "}
+                    <span id="filter-x">{showFilterOptions ? "ʌ" : "v"}</span>
+                </div>
+                {filtersDropdownOptions}
+            </div>
+            <div className="selected-filters">
+                {selectedFilters.map((f, idx) => {
+                    return (
+                        <div
+                            className="pill"
+                            key={idx}
+                            onClick={handleRemoveFilter(f)}
+                        >
+                            {`${filterDictionary[f]} x`}
+                        </div>
+                    );
+                })}
+            </div>
             <style jsx>{`
                 .pill {
                     border-style: solid;
@@ -106,7 +141,6 @@ export default FilterBar = ({
                     display: flex;
                     justify-content: space-between;
                 }
-
                 #filter-name {
                     width: 80%;
                 }
@@ -127,29 +161,8 @@ export default FilterBar = ({
                     margin-right: 5px;
                 }
             `}</style>
-            <div
-                className="general-container filter-bar"
-                onClick={handleShowFilterOptions}
-            >
-                <div className="filter-bar-text">
-                    <span id="filter-name">filter</span>{" "}
-                    <span id="filter-x">{showFilter ? "ʌ" : "v"}</span>
-                </div>
-                {filterOptions}
-            </div>
-            <div className="selected-filters">
-                {selectedFilters.map((f, idx) => {
-                    return (
-                        <div
-                            className="pill"
-                            key={idx}
-                            onClick={handleSelectFilter}
-                        >
-                            {`${filterOptionsDictionary[f]} x`}
-                        </div>
-                    );
-                })}
-            </div>
         </div>
     );
-};
+}
+
+export default FilterBar;

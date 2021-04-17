@@ -7,11 +7,11 @@ import Card from "../components/Card";
 import CardBody from "../components/CardBody";
 import { media, watchIcons, tags } from "../data/media";
 import { useState } from "react";
-import { useAppContext } from "../context/mediaState";
+import { useAppContext } from "../context/state";
 import ReactPlayer from "react-player";
 import Image from "next/image";
 import Popover from "../components/Popover";
-import { AppWrapper } from "../context/mediaState";
+import FilterBar from "../components/FilterBar";
 
 const IMG_WIDTH = 230;
 const IMG_HEIGHT = 320;
@@ -28,22 +28,27 @@ const Trailer = () => {
     );
 };
 export default function Media() {
-    const [showFilter, setShowFilter] = useState(false);
-    const [filter, setFilter] = useState([]);
-    const [selectedMedia, setSelectedMedia] = useState({});
+    const [filters, setFilters] = useState([]);
     const filterOptions = Object.keys(tags).sort();
+    const [selectedMedia, setSelectedMedia] = useState({});
 
     let mediaRecs = [...media];
-    if (filter.length > 0) {
-        const filterValues = filter.map((f) => tags[f]);
-        mediaRecs = mediaRecs.filter((m) => {
-            return filterValues.some((f) => m.tags.includes(f));
-        });
+    if (filters.length > 0) {
+        const filterValues = filters.map((f) => tags[f]);
+        mediaRecs = mediaRecs.filter((m) =>
+            filterValues.some((f) => m.tags.includes(f))
+        );
     }
 
+    const filtersCallback = (updatedFilters) => {
+        setFilters(updatedFilters);
+    };
+
+    // For each media rec in the data model, build the visual for the media card
     const myMedia = mediaRecs.map((media, idx) => {
         const { updateShowTrailer } = useAppContext();
 
+        // Present options for how to view the media (hulu, netflix, etc.)
         const watch = media.watch.map((w, idx) => {
             return (
                 <WatchIcon
@@ -57,15 +62,6 @@ export default function Media() {
 
         return (
             <Card key={idx}>
-                <style jsx global>{`
-                    .movie-wrapper {
-                        cursor: pointer;
-                        border-radius: 12px;
-                    }
-                    .movie-wrapper:hover {
-                        opacity: 0.8;
-                    }
-                `}</style>
                 <CardHeader>{media.name}</CardHeader>
                 <CardBody>
                     <div
@@ -88,49 +84,31 @@ export default function Media() {
                         return <Pill text={tag} key={idx} />;
                     })}
                 </CardBody>
-            </Card>
-        );
-    });
-
-    const tagsDropdown = filterOptions.map((t, idx) => {
-        return (
-            <div
-                className={`search-text${showFilter ? "" : " search-hide"}`}
-                key={idx}
-                onClick={() => {
-                    if (!filter.includes(t)) {
-                        setFilter([...filter, t]);
-                    }
-                }}
-            >
-                <style jsx>{`
-                    .search-text {
-                        transition: background-color 0.5s ease;
-                        border-radius: 12px;
-                        height: 25px;
-                        padding-left: 10px;
-                        display: flex;
-                        align-items: center;
-                    }
-                    .search-text:hover {
-                        background-color: var(--powder-blue);
+                <style jsx global>{`
+                    .movie-wrapper {
                         cursor: pointer;
+                        border-radius: 12px;
                     }
-                    .search-text:active {
-                        background-color: var(--electric-blue);
-                        color: white;
-                    }
-                    .search-hide {
-                        display: none;
+                    .movie-wrapper:hover {
+                        opacity: 0.8;
                     }
                 `}</style>
-                {tags[t]}
-            </div>
+            </Card>
         );
     });
 
     return (
         <div className="page-container">
+            <NavMenu />
+            <Heading>Media Recs 🎥</Heading>
+            <FilterBar
+                callback={filtersCallback}
+                filterOptions={filterOptions}
+                filterDictionary={tags}
+            />
+            <p>Showing {myMedia.length} items</p>
+            <div className="container">{myMedia}</div>
+            <Trailer />
             <style jsx>{`
                 .pill {
                     border-style: solid;
@@ -208,37 +186,6 @@ export default function Media() {
                     margin-right: 5px;
                 }
             `}</style>
-            <NavMenu />
-            <Heading>Media Recs 🎥</Heading>
-
-            <div
-                className="general-container filter-bar"
-                onClick={() => setShowFilter(!showFilter)}
-            >
-                <div className="filter-bar-text">
-                    <span id="filter-name">filter</span>{" "}
-                    <span id="filter-x">{showFilter ? "ʌ" : "v"}</span>
-                </div>
-                {tagsDropdown}
-            </div>
-            <div className="selected-filters">
-                {filter.map((f, idx) => {
-                    return (
-                        <div
-                            className="pill"
-                            key={idx}
-                            onClick={() => {
-                                setFilter([...filter].filter((v) => v != f));
-                            }}
-                        >
-                            {`${tags[f]} x`}
-                        </div>
-                    );
-                })}
-            </div>
-            <p>Showing {myMedia.length} items</p>
-            <div className="container">{myMedia}</div>
-            <Trailer />
         </div>
     );
 }
