@@ -4,7 +4,7 @@ import Head from "next/head";
 export const navOptions = {
     "/": "About.",
     "/media": "Media.",
-    // "/books": "Books.",
+    "/books": "Books.",
     // "/blog": "Blog.",
 };
 
@@ -13,6 +13,27 @@ function NavMenu() {
 
     return (
         <div className="menu-container">
+            <Head>
+                <title>Huong 🌻</title>
+            </Head>
+            <div className="logo-container">
+                <a href="/">
+                    <div className="logo">hd.</div>
+                </a>
+            </div>
+            <div className="options-container">
+                {options.map((pagePath, idx) => {
+                    return (
+                        <div key={idx} className="nav-options">
+                            <Link href={pagePath}>
+                                <div className="button">
+                                    {navOptions[pagePath]}
+                                </div>
+                            </Link>
+                        </div>
+                    );
+                })}
+            </div>
             <style jsx>{`
                 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
                 .button {
@@ -89,27 +110,6 @@ function NavMenu() {
                     width: 80%;
                 }
             `}</style>
-            <Head>
-                <title>Huong 🌻</title>
-            </Head>
-            <div className="logo-container">
-                <a href="/">
-                    <div className="logo">hd.</div>
-                </a>
-            </div>
-            <div className="options-container">
-                {options.map((pagePath, idx) => {
-                    return (
-                        <div key={idx} className="nav-options">
-                            <Link href={pagePath}>
-                                <div className="button">
-                                    {navOptions[pagePath]}
-                                </div>
-                            </Link>
-                        </div>
-                    );
-                })}
-            </div>
         </div>
     );
 }
