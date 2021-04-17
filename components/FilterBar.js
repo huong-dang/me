@@ -67,7 +67,7 @@ function FilterBar({ filterOptions, callback, filterDictionary }) {
                 onClick={() => setShowFilterOptions(!showFilterOptions)}
             >
                 <div className="filter-bar-text">
-                    <span id="filter-name">filter</span>{" "}
+                    <span id="filter-name">filters</span>{" "}
                     <span id="filter-x">{showFilterOptions ? "" : "v"}</span>
                 </div>
                 <div
