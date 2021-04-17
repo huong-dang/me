@@ -58,7 +58,13 @@ a:hover {
 a:active {
     color: var(--electric-blue);
 }
-
 .page-container {
     margin-bottom: 12px;
+}
+.image-wrapper {
+    cursor: pointer;
+    border-radius: 12px;
+}
+.image-wrapper:hover {
+    opacity: 0.8;
 }
