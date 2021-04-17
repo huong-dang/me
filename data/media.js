@@ -294,6 +294,24 @@ export const media = [
         trailerUrl:
             "https://www.youtube.com/watch?v=RK8xHq6dfAo&ab_channel=20thCenturyStudios",
     },
+    {
+        name: "Superstore",
+        url: "https://en.wikipedia.org/wiki/Superstore_(TV_series)",
+        imgUrl: "/media/superstore.jpeg",
+        watch: [
+            {
+                src:
+                    "https://www.hulu.com/series/727810b8-e54b-4f01-9381-a79ab5661bf7",
+                srcName: "hulu",
+            },
+            {
+                src: "http://www.youtube.com/watch?v=b_mMzv4RJzk",
+                srcName: "youtube",
+            },
+        ],
+        tags: [tags.tv, tags.comedy],
+        trailerUrl: "https://www.youtube.com/watch?v=NgZXnTZbF3g",
+    },
     // {
     //     name: "",
     //     url: "",
@@ -305,5 +323,6 @@ export const media = [
     //         },
     //     ],
     //     tags: [],
+    //     trailerUrl: ""
     // },
 ];
