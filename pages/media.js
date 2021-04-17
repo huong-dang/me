@@ -209,7 +209,7 @@ export default function Media() {
                 }
             `}</style>
             <NavMenu />
-            <Heading text="Media Recs 🎥" />
+            <Heading>Media Recs 🎥</Heading>
 
             <div
                 className="general-container filter-bar"
