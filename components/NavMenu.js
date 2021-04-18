@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import Heading from "../components/Heading";
 
 export const navOptions = {
     "/": "About.",
@@ -8,32 +9,35 @@ export const navOptions = {
     // "/blog": "Blog.",
 };
 
-function NavMenu() {
+function NavMenu({ title, special = false }) {
     let options = Object.keys(navOptions);
 
     return (
-        <div className="menu-container">
+        <div>
             <Head>
-                <title>Huong 🌻</title>
+                <title>{title}</title>
             </Head>
-            <div className="logo-container">
-                <a href="/">
-                    <div className="logo">hd.</div>
-                </a>
+            <div className="menu-container">
+                <div className="logo-container">
+                    <a href="/">
+                        <div className="logo">hd.</div>
+                    </a>
+                </div>
+                <div className="options-container">
+                    {options.map((pagePath, idx) => {
+                        return (
+                            <div key={idx} className="nav-options">
+                                <Link href={pagePath}>
+                                    <div className="button">
+                                        {navOptions[pagePath]}
+                                    </div>
+                                </Link>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
-            <div className="options-container">
-                {options.map((pagePath, idx) => {
-                    return (
-                        <div key={idx} className="nav-options">
-                            <Link href={pagePath}>
-                                <div className="button">
-                                    {navOptions[pagePath]}
-                                </div>
-                            </Link>
-                        </div>
-                    );
-                })}
-            </div>
+            <Heading special={special}>{title}</Heading>
             <style jsx>{`
                 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
                 .button {

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import NavMenu from "../components/NavMenu";
-import Heading from "../components/Heading";
 import { books, tags } from "../data/books";
 import FilterBar from "../components/FilterBar";
 import CardHeader from "../components/CardHeader";
@@ -44,8 +43,7 @@ function Books() {
 
     return (
         <div className="page-container">
-            <NavMenu />
-            <Heading>Book Recs 📚</Heading>
+            <NavMenu title={"Book Recs 📚"} />
             <FilterBar
                 filterOptions={filterOptions}
                 callback={filtersCallback}

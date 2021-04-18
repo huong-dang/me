@@ -1,6 +1,5 @@
 import NavMenu from "../components/NavMenu";
 import WatchIcon from "../components/WatchIcon";
-import Heading from "../components/Heading";
 import CardHeader from "../components/CardHeader";
 import Pill from "../components/Pill";
 import Card from "../components/Card";
@@ -84,8 +83,7 @@ export default function Media() {
 
     return (
         <div className="page-container">
-            <NavMenu />
-            <Heading>Media Recs 🎥</Heading>
+            <NavMenu title={"Media Recs 🎥"} />
             <FilterBar
                 callback={filtersCallback}
                 filterOptions={filterOptions}
