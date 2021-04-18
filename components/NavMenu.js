@@ -7,7 +7,7 @@ export const navOptions = {
     "/": "About.",
     "/media": "Media.",
     "/books": "Books.",
-    "/blog": "Blog.",
+    // "/blog": "Blog.",
 };
 
 function NavMenu({ pageTitle, pageHeading, special = false }) {
@@ -66,31 +66,10 @@ function NavMenu({ pageTitle, pageHeading, special = false }) {
                 a {
                     text-decoration: none;
                 }
-                .hamburger-icon {
-                    font-size: xx-large;
-                    color: var(--electric-blue);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: solid;
-                    height: 40px;
-                    width: 40px;
-                    border-width: thin;
-                    border-radius: 12px;
-                    padding: 0px 2px 2px 2px;
-                    box-shadow: 5px 5px 0 var(--charcoal);
-                    cursor: pointer;
-                    transition: background-color 0.5s ease;
-                }
-                .hamburger-icon:hover {
-                    background-color: var(--powder-blue);
-                    cursor: pointer;
-                }
                 .menu-container {
-                    margin-top: 12px;
-                    margin-left: 120px;
-                    margin-right: 120px;
                     height: 80px;
+                    margin: 12px var(--large-media-padding) 0px
+                        var(--large-media-padding);
                 }
                 .logo {
                     height: 64px;
@@ -132,8 +111,8 @@ function NavMenu({ pageTitle, pageHeading, special = false }) {
                 }
                 @media only screen and (max-width: 768px) {
                     .menu-container {
-                        margin-left: var(--small-media-space);
-                        margin-right: var(--small-media-space);
+                        margin-left: var(--small-media-padding);
+                        margin-right: var(--small-media-padding);
                     }
                 }
                 @media only screen and (max-width: 600px) {
@@ -144,6 +123,26 @@ function NavMenu({ pageTitle, pageHeading, special = false }) {
                         float: right;
                         height: 100%;
                         padding-top: 13px;
+                    }
+                    .hamburger-icon {
+                        font-size: xx-large;
+                        color: var(--electric-blue);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: solid;
+                        height: 40px;
+                        width: 40px;
+                        border-width: thin;
+                        border-radius: 12px;
+                        padding: 0px 2px 2px 2px;
+                        box-shadow: 5px 5px 0 var(--charcoal);
+                        cursor: pointer;
+                        transition: background-color 0.5s ease;
+                    }
+                    .hamburger-icon:hover {
+                        background-color: var(--powder-blue);
+                        cursor: pointer;
                     }
                     .side-nav {
                         height: 100%;
@@ -160,7 +159,7 @@ function NavMenu({ pageTitle, pageHeading, special = false }) {
                     .x-icon {
                         float: right;
                         font-size: x-large;
-                        height: 100%;
+                        height: 50px;
                         width: 50px;
                         text-align: center;
                         padding-top: 5px;

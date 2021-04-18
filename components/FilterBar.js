@@ -135,8 +135,8 @@ function FilterBar({ filterOptions, callback, filterDictionary }) {
                 }
                 @media only screen and (max-width: 768px) {
                     .filter-bar {
-                        margin-left: var(--small-media-space);
-                        margin-right: var(--small-media-space);
+                        margin-left: var(--small-media-padding);
+                        margin-right: var(--small-media-padding);
                     }
                 }
 
