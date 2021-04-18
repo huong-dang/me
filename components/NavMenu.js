@@ -9,13 +9,13 @@ export const navOptions = {
     // "/blog": "Blog.",
 };
 
-function NavMenu({ title, special = false }) {
+function NavMenu({ pageTitle, pageHeading, special = false }) {
     let options = Object.keys(navOptions);
 
     return (
         <div>
             <Head>
-                <title>{title}</title>
+                <title>{pageTitle}</title>
             </Head>
             <div className="menu-container">
                 <div className="logo-container">
@@ -37,7 +37,7 @@ function NavMenu({ title, special = false }) {
                     })}
                 </div>
             </div>
-            <Heading special={special}>{title}</Heading>
+            <Heading special={special}>{pageHeading}</Heading>
             <style jsx>{`
                 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
                 .button {

@@ -43,7 +43,7 @@ function Books() {
 
     return (
         <div className="page-container">
-            <NavMenu title={"Book Recs 📚"} />
+            <NavMenu pageTitle="Book Recs 📚" pageHeading={"Book Recs 📚"} />
             <FilterBar
                 filterOptions={filterOptions}
                 callback={filtersCallback}

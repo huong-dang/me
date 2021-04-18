@@ -12,7 +12,11 @@ export default function Home() {
 
     return (
         <div className="page-container">
-            <NavMenu title={"huong dang 🌻"} special />
+            <NavMenu
+                pageTitle={"Huong Dang 🌻"}
+                pageHeading={"huong dang"}
+                special
+            />
             <div className="content">
                 <p>
                     Hello, I'm Huong! I'm a mid-level software engineer

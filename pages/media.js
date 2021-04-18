@@ -83,7 +83,10 @@ export default function Media() {
 
     return (
         <div className="page-container">
-            <NavMenu title={"Media Recs 🎥"} />
+            <NavMenu
+                pageHeading={"Media Recs 🎥"}
+                pageTitle={"Media Recs 🎥"}
+            />
             <FilterBar
                 callback={filtersCallback}
                 filterOptions={filterOptions}
