@@ -68,7 +68,7 @@ function FilterBar({ filterOptions, callback, filterDictionary }) {
             >
                 <div className="filter-bar-text">
                     <span id="filter-name">filters</span>{" "}
-                    <span id="filter-x">{showFilterOptions ? "" : "v"}</span>
+                    <span id="filter-x">{showFilterOptions ? "^" : "v"}</span>
                 </div>
                 <div
                     className={`filter-dropdown${
